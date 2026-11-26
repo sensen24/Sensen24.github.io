@@ -230,9 +230,9 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
 <section class="hero">
 <div class="wrap hero-grid">
   <div>
-    <span class="pill ok">1 langganan = bot Binance + bot Bybit</span>
+    <span class="pill ok">1 bot · Binance &amp; Bybit · pilih sendiri</span>
     <h1>Lihat merchant yang sedang laku, sebelum pasar bergerak.</h1>
-    <p class="lead">Satu langganan P2P Monitor memberi Anda dua bot Telegram: satu untuk Binance P2P, satu untuk Bybit P2P. Bot memantau iklan setiap 30 detik. Anda menerima alert penjualan besar, analisis bank merchant, alert harga, grafik, dan laporan otomatis tanpa memberi akses ke akun exchange Anda.</p>
+    <p class="lead">P2P Monitor memantau Binance P2P dan Bybit P2P sekaligus setiap 30 detik. Anda memilih exchange sendiri di bot dan bisa menggantinya kapan saja. Anda menerima alert penjualan besar, analisis bank merchant, alert harga, grafik, dan laporan otomatis tanpa memberi akses ke akun exchange Anda.</p>
     <div class="row" style="margin-top:32px">
       <a class="btn" href="#harga">Mulai berlangganan
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -240,21 +240,21 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
     </div>
     <div class="stats">
       <div class="stat"><strong>30 detik</strong><span>interval pemindaian</span></div>
-      <div class="stat"><strong>2 bot</strong><span>Binance &amp; Bybit</span></div>
-      <div class="stat"><strong>Rp820rb</strong><span>2 bot, 30 hari</span></div>
+      <div class="stat"><strong>2 exchange</strong><span>dalam 1 bot</span></div>
+      <div class="stat"><strong>Rp820rb</strong><span>per 30 hari</span></div>
     </div>
   </div>
 
   <div>
     <div class="seg" role="group" aria-label="Pilih contoh bot">
-      <button type="button" aria-pressed="true" data-ph="ph-binance">Bot Binance</button>
-      <button type="button" aria-pressed="false" data-ph="ph-bybit">Bot Bybit</button>
+      <button type="button" aria-pressed="true" data-ph="ph-binance">Binance</button>
+      <button type="button" aria-pressed="false" data-ph="ph-bybit">Bybit</button>
     </div>
-    <div class="phone" role="img" id="ph-binance" aria-label="Contoh alert bot Binance di Telegram">
+    <div class="phone" role="img" id="ph-binance" aria-label="Contoh alert Binance di Telegram">
       <div class="screen">
         <div class="tg-top">
           <svg width="40" height="40" viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="256" fill="#1D4ED8"/><path d="M174 256H210L238 186L276 326L304 256H338" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><circle cx="138" cy="256" r="38" fill="#fff"/><circle cx="374" cy="256" r="38" fill="#fff"/></svg>
-          <div><b>P2P Monitor · Binance</b><small>bot</small></div>
+          <div><b>P2P Monitor</b><small>bot · 🟡 Binance P2P</small></div>
         </div>
         <div class="chat">
           <div class="bubble">
@@ -279,11 +279,11 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
         </div>
       </div>
     </div>
-    <div class="phone" role="img" id="ph-bybit" aria-label="Contoh alert bot Bybit di Telegram" hidden>
+    <div class="phone" role="img" id="ph-bybit" aria-label="Contoh alert Bybit di Telegram" hidden>
       <div class="screen">
         <div class="tg-top">
           <svg width="40" height="40" viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="256" fill="#1D4ED8"/><path d="M174 256H210L238 186L276 326L304 256H338" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><circle cx="138" cy="256" r="38" fill="#fff"/><circle cx="374" cy="256" r="38" fill="#fff"/></svg>
-          <div><b>P2P Monitor · Bybit</b><small>bot</small></div>
+          <div><b>P2P Monitor</b><small>bot · 🟠 Bybit P2P</small></div>
         </div>
         <div class="chat">
           <div class="bubble">
@@ -584,6 +584,7 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
       <p>Semua fitur ada di balik tombol. Ketuk kategori, pilih analisis, dan hasilnya langsung muncul. Ada tombol 🔄 Perbarui di setiap laporan.</p>
       <ol class="anno">
         <li><div><b>Status bot</b>: exchange yang dipantau, jumlah iklan terbaca, dan jam pemindaian terakhir.</div></li>
+        <li><div><b>🔄 Ganti Exchange</b>: pindah antara Binance dan Bybit kapan saja, langsung dari menu.</div></li>
         <li><div><b>Masa aktif langganan</b> terlihat di menu. Bot mengingatkan 3 hari sebelum berakhir.</div></li>
         <li><div><b>Pengaturan pribadi</b>: batas minimal alert, filter bank, merchant favorit, dan laporan otomatis diatur sendiri oleh tiap pengguna.</div></li>
       </ol>
@@ -606,6 +607,7 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
           <span class="full">🧠 Merchant Bank Intelligence</span>
           <span>🔔 Alert Pintar</span><span>📉 Analisis &amp; Grafik</span>
           <span>⏱️ Periode: 24 jam</span><span>⚙️ Pengaturan</span>
+          <span class="full">🔄 Ganti Exchange · 🟡 Binance</span>
           <span>📤 Export CSV</span><span>📡 Status</span>
           <span class="full">💳 Langganan</span>
         </div>
@@ -661,10 +663,10 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
     <p class="lead">Pembayaran diperiksa langsung oleh admin. Setelah aktif, semua fitur langsung bisa dipakai dari Telegram Anda.</p>
   </div>
   <div class="grid4">
-    <div class="card step"><div class="num">01</div><h3>Hubungi admin</h3><p>Chat <a href="https://t.me/sheantu88">@sheantu88</a> di Telegram. Admin mengirim link kedua bot dan info pembayaran.</p></div>
-    <div class="card step"><div class="num">02</div><h3>Lakukan pembayaran</h3><p>Transfer Rp820.000 (atau $45) sekali untuk kedua bot, sesuai info pembayaran di bot.</p></div>
-    <div class="card step"><div class="num">03</div><h3>Kirim bukti</h3><p>Kirim foto atau screenshot bukti transfer ke salah satu bot.</p></div>
-    <div class="card step"><div class="num">04</div><h3>Dua bot aktif 30 hari</h3><p>Admin mengaktifkan akses Anda di bot Binance dan bot Bybit. Bot mengingatkan 3 hari sebelum masa aktif berakhir.</p></div>
+    <div class="card step"><div class="num">01</div><h3>Hubungi admin</h3><p>Chat <a href="https://t.me/sheantu88">@sheantu88</a> di Telegram. Admin mengirim link bot dan info pembayaran.</p></div>
+    <div class="card step"><div class="num">02</div><h3>Lakukan pembayaran</h3><p>Transfer Rp820.000 (atau $45) sesuai info pembayaran di bot.</p></div>
+    <div class="card step"><div class="num">03</div><h3>Kirim bukti</h3><p>Kirim foto atau screenshot bukti transfer langsung ke chat bot.</p></div>
+    <div class="card step"><div class="num">04</div><h3>Aktif 30 hari, pilih exchange</h3><p>Setelah admin mengaktifkan akses, pilih Binance atau Bybit di bot. Ganti kapan saja lewat tombol 🔄 Ganti Exchange.</p></div>
   </div>
 </div>
 </section>
@@ -674,18 +676,18 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
 <div class="wrap">
   <div class="head">
     <p class="eyebrow">Harga</p>
-    <h2>Satu langganan, dua bot</h2>
-    <p class="lead">Sekali bayar Rp820.000 untuk 30 hari, Anda langsung mendapat akses ke bot Binance dan bot Bybit sekaligus. Pantau dua pasar P2P tanpa biaya tambahan.</p>
+    <h2>Satu langganan, dua exchange</h2>
+    <p class="lead">Sekali bayar Rp820.000 untuk 30 hari, Anda bisa memantau Binance P2P dan Bybit P2P dalam satu bot. Pilih exchange di menu dan ganti kapan saja, tanpa biaya tambahan.</p>
   </div>
 
   <div class="card price bundle">
     <div class="bundle-top">
       <div>
-        <span class="pill ok">Termasuk 2 bot · 30 hari</span>
+        <span class="pill ok">Binance + Bybit · 30 hari</span>
         <div class="amount">Rp820.000 <small>/ 30 hari</small></div>
-        <p style="color:var(--ink-3)">atau $45 per 30 hari · berlaku untuk kedua bot</p>
+        <p style="color:var(--ink-3)">atau $45 per 30 hari · termasuk Binance &amp; Bybit</p>
       </div>
-      <a class="btn" href="https://t.me/sheantu88?text=Halo%20admin%2C%20saya%20mau%20berlangganan%20P2P%20Monitor%20(bot%20Binance%20%2B%20Bybit)">Berlangganan sekarang
+      <a class="btn" href="https://t.me/sheantu88?text=Halo%20admin%2C%20saya%20mau%20berlangganan%20P2P%20Monitor">Berlangganan sekarang
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="bots">
@@ -693,7 +695,7 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
         <div class="botstrip"></div>
         <div class="bothead">
           <div class="exdot" aria-hidden="true">B</div>
-          <div><h3 style="margin:0">P2P Monitor · Binance</h3><p>Pasar Binance P2P USDT/IDR</p></div>
+          <div><h3 style="margin:0">Binance P2P</h3><p>Pasar USDT/IDR di Binance</p></div>
           <span class="pill ok" style="margin-left:auto">Termasuk</span>
         </div>
         <ul class="ul">
@@ -706,7 +708,7 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
         <div class="botstrip"></div>
         <div class="bothead">
           <div class="exdot" aria-hidden="true">B</div>
-          <div><h3 style="margin:0">P2P Monitor · Bybit</h3><p>Pasar Bybit P2P USDT/IDR</p></div>
+          <div><h3 style="margin:0">Bybit P2P</h3><p>Pasar USDT/IDR di Bybit</p></div>
           <span class="pill ok" style="margin-left:auto">Termasuk</span>
         </div>
         <ul class="ul">
@@ -719,7 +721,7 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
   </div>
 
   <div class="card" style="margin-top:24px;padding:0;overflow:hidden">
-    <div style="padding:22px 26px 6px"><h3 style="margin:0">Fitur di setiap bot</h3></div>
+    <div style="padding:22px 26px 6px"><h3 style="margin:0">Fitur untuk kedua exchange</h3></div>
     <div class="tscroll">
     <table class="cmp">
       <thead><tr><th scope="col">Fitur</th><th scope="col">Binance</th><th scope="col">Bybit</th></tr></thead>
@@ -741,7 +743,7 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
   </div>
 
   <div class="terms">
-    <div><b>Berlaku 30 hari</b><span>Dihitung sejak akses diaktifkan admin, untuk kedua bot.</span></div>
+    <div><b>Berlaku 30 hari</b><span>Dihitung sejak akses diaktifkan admin.</span></div>
     <div><b>Perpanjang kapan saja</b><span>Sisa masa aktif tetap terhitung.</span></div>
     <div><b>Pengingat otomatis</b><span>Dikirim 3 hari sebelum masa aktif habis.</span></div>
     <div><b>Satu akun Telegram</b><span>Akses berlaku untuk akun Telegram yang membayar.</span></div>
@@ -758,8 +760,8 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
   </div>
   <details><summary>Apakah saya perlu memberi API key atau password exchange?</summary><p>Tidak. Bot hanya membaca daftar iklan P2P yang tampil publik. Bot tidak bisa mengakses akun, dana, atau order Anda.</p></details>
   <details><summary>Apakah saya perlu memasang sesuatu?</summary><p>Tidak. Cukup aplikasi Telegram di HP atau komputer. Setelah akses aktif, buka bot dan ketik /start.</p></details>
-  <details><summary>Apa beda bot Binance dan bot Bybit?</summary><p>Fiturnya sama. Bedanya hanya pasar yang dipantau: bot Binance membaca Binance P2P, bot Bybit membaca Bybit P2P. Keduanya sudah termasuk dalam satu langganan.</p></details>
-  <details><summary>Apakah Rp820.000 sudah untuk kedua bot?</summary><p>Ya. Rp820.000 (atau $45) per 30 hari sudah termasuk akses bot Binance dan bot Bybit. Pengaturan seperti merchant favorit dan filter bank diatur sendiri di tiap bot.</p></details>
+  <details><summary>Bagaimana cara memilih Binance atau Bybit?</summary><p>Saat pertama membuka bot, Anda diminta memilih exchange. Setelah itu, ganti kapan saja lewat tombol 🔄 Ganti Exchange di menu. Bot memantau keduanya bersamaan, jadi data langsung tersedia saat Anda berpindah.</p></details>
+  <details><summary>Apakah Rp820.000 sudah termasuk Binance dan Bybit?</summary><p>Ya. Rp820.000 (atau $45) per 30 hari sudah termasuk keduanya dalam satu bot. Alert harga dan merchant favorit disimpan terpisah untuk tiap exchange.</p></details>
   <details><summary>Seberapa akurat datanya?</summary><p>Data iklan seperti harga, stok, dan metode pembayaran dibaca langsung. Penjualan dihitung dari penurunan stok, lalu diverifikasi lewat kenaikan jumlah order merchant. Setiap pesan diberi label status, dan data yang tidak dibuka exchange ditulis “tidak tersedia”.</p></details>
   <details><summary>Bisakah bot menunjukkan bank yang dipakai pembeli?</summary><p>Tidak, karena exchange tidak membuka informasi itu. Bank dipastikan hanya bila iklan menerima satu bank saja. Untuk iklan multi-bank, semua metode ditampilkan sebagai kandidat.</p></details>
   <details><summary>Bisakah bot bertransaksi atau melepas USDT otomatis?</summary><p>Tidak. P2P Monitor adalah alat pantau dan analisis. Semua transaksi tetap Anda lakukan sendiri di aplikasi exchange.</p></details>
@@ -791,7 +793,7 @@ footer{background:var(--ink);border-top:1px solid #2A3441;padding:40px 0;color:#
     </div>
     <div class="crow">
       <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7EA2F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/></svg></div>
-      <div><b>Harga</b><span>Rp820.000 atau $45 per 30 hari, termasuk 2 bot</span></div>
+      <div><b>Harga</b><span>Rp820.000 atau $45 per 30 hari, termasuk Binance &amp; Bybit</span></div>
     </div>
     <div class="crow">
       <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7EA2F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
