@@ -352,6 +352,33 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 .syslink span{display:inline-flex;align-items:center;gap:8px}
 .syslink span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0}
 @media (max-width:960px){.sys3{grid-template-columns:minmax(0,1fr)}}
+/* kelebihan web & aplikasi */
+.webmock{background:#fff;border-radius:16px;border:1px solid var(--line);box-shadow:0 40px 70px -40px rgba(12,26,51,.45);overflow:hidden;font-size:12.5px}
+.wm-bar{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#EEF1F6;border-bottom:1px solid var(--line)}
+.wm-bar i{width:9px;height:9px;border-radius:50%;background:#CBD3DF;flex-shrink:0}
+.wm-url{flex:1;background:#fff;border-radius:7px;padding:4px 10px;color:var(--ink-3);font-size:12px;display:flex;gap:6px;align-items:center;min-width:0;white-space:nowrap;overflow:hidden}
+.wm-body{padding:14px;background:#F1F3F7}
+.wm-live{font-size:11.5px;font-weight:700;color:#0B8A5F;margin-bottom:8px}
+.wm-best{background:#E2F5EC;border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.wm-best small{color:#0B8A5F;font-weight:700;font-size:11px}.wm-best b{display:block;font-size:15px}
+.wm-tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums}
+.wm-tbl th,.wm-tbl td{padding:7px 8px;text-align:right;border-bottom:1px solid #ECF0F5;white-space:nowrap}
+.wm-tbl thead th{font-size:10.5px;color:#5F6B84;font-weight:700}
+.wm-tbl tbody th{text-align:left;font-weight:700}
+.wm-tbl td.g{background:#E2F5EC;color:#0B8A5F;font-weight:800}
+.wm-tbl tr:last-child th,.wm-tbl tr:last-child td{border-bottom:0}
+.cmp{margin-top:96px;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:#fff}
+.cmp-h{padding:22px 26px 6px}.cmp-h h3{font-size:22px}.cmp-h p{color:var(--ink-3);margin:4px 0 0}
+.cmp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cmp table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px}
+.cmp th,.cmp td{padding:13px 16px;border-top:1px solid var(--line-2);text-align:center}
+.cmp thead th{font-size:14px;color:var(--ink-2);background:var(--mist);border-top:0}
+.cmp tbody th{text-align:left;font-weight:600;color:var(--ink)}
+.cmp td{color:var(--ink-3)}
+.cmp .y{color:var(--sold);font-weight:800}
+.cmp .p{color:var(--est);font-weight:600;font-size:13.5px}
+.cmp tbody th small{display:block;font-weight:400;color:var(--ink-3);font-size:13px}
+@media (max-width:640px){.cmp{margin-top:72px}.cmp-h{padding:18px 16px 4px}.cmp table{min-width:430px;font-size:13px}.cmp th,.cmp td{padding:11px 8px}.cmp thead th{font-size:12px}.cmp .p{font-size:12px}.cmp tbody th{width:34%}}
 /* peluang & rekomendasi */
 .opp-sec{background:var(--navy);color:#fff}
 .opp-sec .lead{color:#C2CEE4}.opp-sec .lead b{color:#fff}
@@ -439,7 +466,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div>Shean<span>bot</span></div>
   </a>
   <nav class="links" aria-label="Navigasi utama">
-    <a href="#sistem">3 Sistem</a><a href="#peluang">Peluang harga</a><a href="#radar">Radar Bank</a><a href="#fitur">Fitur</a><a href="#harga">Harga</a><a href="#faq">FAQ</a>
+    <a href="#sistem">3 Sistem</a><a href="#webapp">Web &amp; Aplikasi</a><a href="#peluang">Peluang harga</a><a href="#radar">Radar Bank</a><a href="#fitur">Fitur</a><a href="#harga">Harga</a><a href="#faq">FAQ</a>
     <a class="btn" href="#harga">Berlangganan</a>
   </nav>
 </div>
@@ -628,6 +655,96 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <span>Data yang sama di ketiga sistem</span>
     <span>Login web aman: dibatasi 1 perangkat</span>
     <span>Terkunci otomatis bila langganan habis</span>
+  </div>
+</div>
+</section>
+
+<!-- KELEBIHAN WEB & APLIKASI -->
+<section class="sec mist" id="webapp">
+<div class="wrap">
+  <div class="head">
+    <p class="kicker">Kelebihan Web &amp; Aplikasi</p>
+    <h2>Lebih lengkap dari pesan Telegram</h2>
+    <p class="lead">Pesan Telegram punya batas panjang, jadi sebagian data harus diringkas. Di web dan aplikasi, semua data tampil utuh: tabel, grafik, filter, dan profil merchant, diperbarui otomatis setiap ±15 detik.</p>
+  </div>
+
+  <div class="show">
+    <div>
+      <p class="kicker">Web Member · app.sheanbot.com</p>
+      <h2>Semua bank dan semua nominal dalam satu layar</h2>
+      <p class="lead">Lihat harga iklan beli paling atas untuk setiap bank di setiap nominal sekaligus, lalu ketuk untuk melihat harga yang perlu Anda pasang agar jadi nomor satu.</p>
+      <ul class="ticks">
+        <li><span><b>Tanpa diringkas:</b> semua bank tampil, bukan hanya beberapa teratas seperti di pesan Telegram.</span></li>
+        <li><span><b>Live tiap ±15 detik:</b> halaman memperbarui sendiri, tanpa menekan tombol.</span></li>
+        <li><span><b>Riwayat 90 hari:</b> cari berdasarkan bank, nama merchant, status verifikasi, atau minimal USDT.</span></li>
+        <li><span><b>Profil merchant:</b> stok, harga, posisi harga, order 30 hari, volume harian, dan jam paling ramai.</span></li>
+        <li><span><b>Unduh Excel/CSV</b> untuk dicatat atau dianalisa sendiri, dan tampilan lebar di laptop.</span></li>
+      </ul>
+    </div>
+    <div class="show-media">
+      <div class="webmock" role="img" aria-label="Ilustrasi web member Sheanbot: tabel bank dan nominal">
+        <div class="wm-bar"><i></i><i></i><i></i><div class="wm-url">🔒 app.sheanbot.com/app</div></div>
+        <div class="wm-body">
+          <div class="wm-live">● LIVE · Nominal × Bank · Stok USDT</div>
+          <div class="wm-best"><small>Paling murah untuk stok sekarang</small><b>SeaBank · filter Rp100.000 → pasang Rp16.791</b></div>
+          <table class="wm-tbl">
+            <thead><tr><th>Bank</th><th>20rb</th><th>100rb</th><th>1jt</th><th>10jt</th></tr></thead>
+            <tbody>
+              <tr><th>SeaBank</th><td class="g">16.786</td><td class="g">16.790</td><td>16.805</td><td>16.820</td></tr>
+              <tr><th>DANA</th><td>16.792</td><td>16.796</td><td class="g">16.798</td><td>–</td></tr>
+              <tr><th>BCA</th><td>16.810</td><td>16.812</td><td>16.809</td><td class="g">16.815</td></tr>
+              <tr><th>BRI</th><td>16.808</td><td>16.811</td><td>16.814</td><td>16.818</td></tr>
+              <tr><th>Mandiri</th><td>16.815</td><td>16.816</td><td>16.812</td><td>16.817</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="illus" style="text-align:center;margin-top:12px;font-size:13px;color:var(--ink-3)">Ilustrasi. Angka bukan data asli.</p>
+    </div>
+  </div>
+
+  <div class="show rev">
+    <div>
+      <p class="kicker">Aplikasi di HP</p>
+      <h2>Ikon Sheanbot di layar HP, bunyi saat laku jumbo</h2>
+      <p class="lead">Pasang langsung dari browser dalam 3 ketukan, tanpa App Store atau Play Store. Sheanbot terbuka layar penuh seperti aplikasi biasa.</p>
+      <ul class="ticks">
+        <li><span><b>Laku jumbo bersuara:</b> bunyi khusus dan banner merah saat ada penjualan di atas ambang pilihan Anda, misalnya 5.000 USDT.</span></li>
+        <li><span><b>Angka bergerak live:</b> harga terbaik, teks berjalan penjualan terbaru, dan peluang harga tinggi.</span></li>
+        <li><span><b>Sekali ketuk:</b> langsung dari layar utama, tidak perlu mencari chat bot dulu.</span></li>
+        <li><span><b>Atur semuanya di satu tempat:</b> exchange, Jual/Stok, nominal, minimal penjualan, merchant favorit, dan alert.</span></li>
+        <li><span><b>Telegram tetap jalan:</b> saat aplikasi ditutup, alert tetap masuk ke Telegram.</span></li>
+      </ul>
+    </div>
+    <div class="show-media">
+      <div class="appmock" role="img" aria-label="Ilustrasi aplikasi Sheanbot di HP">
+        <div class="am-top"><b>Sheanbot</b><div class="am-seg"><span class="on">Binance</span><span>Bybit</span></div></div>
+        <div class="am-ban"><span style="font-size:22px">🚨</span><div><b>LAKU JUMBO · +12.500 USDT</b><small>TOKO_USDT_ID · Rp16.878 · Mandiri</small></div></div>
+        <div class="am-hero"><small>Harga jual terbaik · Binance P2P</small><div class="p">Rp16.846</div><small>Median Rp16.851 · Stok 2,06 jt USDT</small></div>
+        <div class="am-opp"><b>🔥 Peluang harga tinggi</b><div>Pasang sekitar <strong>Rp16.875</strong></div></div>
+        <div class="am-row"><span>VERIFIED-P2P · 14:25</span><em>+1.511 USDT</em></div>
+      </div>
+      <p class="illus" style="text-align:center;margin-top:12px;font-size:13px;color:var(--ink-3)">Ilustrasi. Angka bukan data asli.</p>
+    </div>
+  </div>
+
+  <div class="cmp">
+    <div class="cmp-h"><h3>Mana yang dipakai untuk apa?</h3><p>Semuanya termasuk dalam satu langganan. Pakai sesuai kebutuhan.</p></div>
+    <div class="cmp-scroll">
+    <table>
+      <thead><tr><th scope="col" style="text-align:left">Fitur</th><th scope="col">Telegram Bot</th><th scope="col">Web Member</th><th scope="col">Aplikasi</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Alert masuk walau HP terkunci</th><td class="y">✓</td><td>–</td><td>–</td></tr>
+        <tr><th scope="row">Bunyi &amp; banner laku jumbo<small>saat halaman terbuka</small></th><td>notifikasi Telegram</td><td class="y">✓</td><td class="y">✓</td></tr>
+        <tr><th scope="row">Semua bank × semua nominal</th><td class="p">diringkas</td><td class="y">✓ lengkap</td><td class="y">✓ lengkap</td></tr>
+        <tr><th scope="row">Riwayat 90 hari + filter</th><td class="p">ringkasan</td><td class="y">✓</td><td class="y">✓</td></tr>
+        <tr><th scope="row">Profil detail merchant</th><td class="p">teks singkat</td><td class="y">✓</td><td class="y">✓</td></tr>
+        <tr><th scope="row">Unduh Excel/CSV</th><td class="y">✓</td><td class="y">✓</td><td class="p">via browser</td></tr>
+        <tr><th scope="row">Tampilan lebar di laptop</th><td>–</td><td class="y">✓</td><td>–</td></tr>
+        <tr><th scope="row">Tanpa login tambahan</th><td class="y">✓</td><td class="p">login Telegram</td><td class="p">login Telegram sekali</td></tr>
+      </tbody>
+    </table>
+    </div>
   </div>
 </div>
 </section>
@@ -921,30 +1038,6 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         </svg>
         <div class="chart-meta"><div>Termurah<b>Rp16,795</b></div><div>Median<b>Rp16,846</b></div><div>Tertinggi<b>Rp16,910</b></div></div>
       </div>
-    </div>
-  </div>
-
-  <div class="show rev">
-    <div>
-      <p class="kicker">Aplikasi &amp; suara</p>
-      <h2>Aplikasi di HP, bunyi saat laku jumbo</h2>
-      <p class="lead">Buka dari tombol di bot atau pasang ikon Sheanbot di layar HP. Selama aplikasi terbuka, data diperbarui setiap beberapa detik.</p>
-      <ul class="ticks">
-        <li><span><b>Laku jumbo bersuara:</b> bunyi khusus dan banner merah saat ada penjualan di atas ambang pilihan Anda, misalnya 5.000 USDT.</span></li>
-        <li><span><b>Live:</b> harga terbaik, teks berjalan penjualan terbaru, dan peluang harga tinggi.</span></li>
-        <li><span><b>Radar Bank:</b> peringatan saat merchant serentak menghapus suatu bank dari iklannya, sinyal awal bank bermasalah.</span></li>
-        <li><span><b>Telegram tetap jalan:</b> saat aplikasi ditutup, alert masuk ke Telegram. Penjualan kecil bisa dibuat tanpa suara.</span></li>
-      </ul>
-    </div>
-    <div class="show-media">
-      <div class="appmock" role="img" aria-label="Ilustrasi aplikasi Sheanbot di HP">
-        <div class="am-top"><b>Sheanbot</b><div class="am-seg"><span class="on">Binance</span><span>Bybit</span></div></div>
-        <div class="am-ban"><span style="font-size:22px">🚨</span><div><b>LAKU JUMBO · +12.500 USDT</b><small>TOKO_USDT_ID · Rp16.878 · Mandiri</small></div></div>
-        <div class="am-hero"><small>Harga jual terbaik · Binance P2P</small><div class="p">Rp16.846</div><small>Median Rp16.851 · Stok 2,06 jt USDT</small></div>
-        <div class="am-opp"><b>🔥 Peluang harga tinggi</b><div>Pasang sekitar <strong>Rp16.875</strong></div></div>
-        <div class="am-row"><span>VERIFIED-P2P · 14:25</span><em>+1.511 USDT</em></div>
-      </div>
-      <p class="illus" style="text-align:center;margin-top:12px;font-size:13px;color:var(--ink-3)">Ilustrasi. Angka bukan data asli.</p>
     </div>
   </div>
 
@@ -1456,7 +1549,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <p style="max-width:48ch">Sheanbot tidak berafiliasi dengan Binance atau Bybit. Bukan saran keuangan atau investasi. Data berasal dari sumber publik dan dapat berubah, tertunda, atau tidak lengkap.</p>
     </div>
     <nav aria-label="Tautan footer">
-      <a href="#sistem">3 Sistem</a><a href="#peluang">Peluang harga</a><a href="#stok">Jual &amp; Stok</a><a href="#radar">Radar Bank</a><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+      <a href="#sistem">3 Sistem</a><a href="#webapp">Web &amp; Aplikasi</a><a href="#peluang">Peluang harga</a><a href="#stok">Jual &amp; Stok</a><a href="#radar">Radar Bank</a><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
     </nav>
   </div>
   <div class="copy"><span>© <span id="yr">2026</span> Sheanbot</span><span>sheanbot.com</span></div>
