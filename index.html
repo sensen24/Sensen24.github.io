@@ -346,6 +346,8 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 .sys3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
 .sys3 .scard{height:100%}
 .sysn{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.01em}
+.sysdesc{margin:0;color:var(--ink-2);font-size:15.5px}
+.sysdesc b{color:var(--ink)}
 .sysrole{margin:auto 0 0;padding:10px 14px;border-radius:var(--r-sm);background:var(--mist);color:var(--ink-2);font-size:14.5px}
 .sysrole b{color:var(--ink)}
 .syslink{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px 22px;padding:16px 20px;border-radius:var(--r);background:var(--blue-50);color:var(--ink-2);font-size:15px}
@@ -367,18 +369,6 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 .wm-tbl tbody th{text-align:left;font-weight:700}
 .wm-tbl td.g{background:#E2F5EC;color:#0B8A5F;font-weight:800}
 .wm-tbl tr:last-child th,.wm-tbl tr:last-child td{border-bottom:0}
-.cmp{margin-top:96px;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:#fff}
-.cmp-h{padding:22px 26px 6px}.cmp-h h3{font-size:22px}.cmp-h p{color:var(--ink-3);margin:4px 0 0}
-.cmp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.cmp table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px}
-.cmp th,.cmp td{padding:13px 16px;border-top:1px solid var(--line-2);text-align:center}
-.cmp thead th{font-size:14px;color:var(--ink-2);background:var(--mist);border-top:0}
-.cmp tbody th{text-align:left;font-weight:600;color:var(--ink)}
-.cmp td{color:var(--ink-3)}
-.cmp .y{color:var(--sold);font-weight:800}
-.cmp .p{color:var(--est);font-weight:600;font-size:13.5px}
-.cmp tbody th small{display:block;font-weight:400;color:var(--ink-3);font-size:13px}
-@media (max-width:640px){.cmp{margin-top:72px}.cmp-h{padding:18px 16px 4px}.cmp table{min-width:430px;font-size:13px}.cmp th,.cmp td{padding:11px 8px}.cmp thead th{font-size:12px}.cmp .p{font-size:12px}.cmp tbody th{width:34%}}
 /* peluang & rekomendasi */
 .opp-sec{background:var(--navy);color:#fff}
 .opp-sec .lead{color:#C2CEE4}.opp-sec .lead b{color:#fff}
@@ -466,7 +456,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div>Shean<span>bot</span></div>
   </a>
   <nav class="links" aria-label="Navigasi utama">
-    <a href="#sistem">3 Sistem</a><a href="#webapp">Web &amp; Aplikasi</a><a href="#peluang">Peluang harga</a><a href="#radar">Radar Bank</a><a href="#fitur">Fitur</a><a href="#harga">Harga</a><a href="#faq">FAQ</a>
+    <a href="#sistem">3 Sistem</a><a href="#peluang">Peluang harga</a><a href="#radar">Radar Bank</a><a href="#fitur">Fitur</a><a href="#harga">Harga</a><a href="#faq">FAQ</a>
     <a class="btn" href="#harga">Berlangganan</a>
   </nav>
 </div>
@@ -493,7 +483,6 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div><b>Rp820.000</b>/bulan · <b>Rp2 jt</b>/3 bulan</div>
       </div>
       <ul class="trust">
-        <li>3 sistem: Telegram Bot, Web Member &amp; Aplikasi</li>
         <li>Tanpa API key atau password exchange</li>
         <li>Setiap penjualan diverifikasi otomatis</li>
         <li>Dibantu admin langsung lewat Telegram</li>
@@ -621,60 +610,27 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
   <div class="sys3">
     <article class="scard">
       <div class="scard-h"><span class="sic">💬</span><div><span class="sysn">Sistem 1</span><h3>Telegram Bot</h3><p>Alarm yang selalu ikut Anda</p></div></div>
-      <ul class="sl">
-        <li><b>Alert real-time</b> laku besar, peluang harga, dan Radar Bank, tetap masuk walau HP terkunci</li>
-        <li>Menu lengkap: laporan, pasar, rekomendasi harga, Merchant Bank Intelligence</li>
-        <li>Papan <b>Nominal × Bank</b> yang diperbarui otomatis</li>
-        <li>Pindah Binance ↔ Bybit, Jual ↔ Stok dengan satu tombol</li>
-      </ul>
+      <p class="sysdesc">Alert laku besar, peluang harga, dan Radar Bank masuk real-time, <b>tetap sampai walau HP terkunci</b>. Semua menu dan laporan ada di chat.</p>
       <p class="sysrole"><b>Paling cocok untuk:</b> kabar cepat di mana saja.</p>
     </article>
     <article class="scard buy">
       <div class="scard-h"><span class="sic">🖥️</span><div><span class="sysn">Sistem 2</span><h3>Web Member</h3><p>Dashboard lengkap di app.sheanbot.com</p></div></div>
-      <ul class="sl">
-        <li><b>Semua bank × semua nominal</b> dalam satu tabel live, dengan saran harga pasang</li>
-        <li><b>Riwayat penjualan 90 hari</b>: filter bank, merchant, status, minimal USDT</li>
-        <li><b>Profil tiap merchant</b>: stok, harga, posisi, volume harian, jam paling ramai</li>
-        <li>Unduh Excel/CSV, tampilan lebar di laptop</li>
-      </ul>
+      <p class="sysdesc">Semua data tampil utuh tanpa batas panjang pesan: tabel, riwayat, dan profil merchant. Nyaman dibuka di laptop.</p>
       <p class="sysrole"><b>Paling cocok untuk:</b> menganalisa sebelum pasang harga.</p>
     </article>
     <article class="scard">
       <div class="scard-h"><span class="sic">📱</span><div><span class="sysn">Sistem 3</span><h3>Aplikasi</h3><p>Ikon Sheanbot di layar HP</p></div></div>
-      <ul class="sl">
-        <li>Pasang langsung dari browser, <b>tanpa App Store atau Play Store</b></li>
-        <li>Terbuka seperti aplikasi biasa: layar penuh, sekali ketuk</li>
-        <li><b>Bunyi dan banner merah</b> saat laku jumbo, angka bergerak live</li>
-        <li>Bisa juga dibuka langsung dari dalam Telegram tanpa login</li>
-      </ul>
+      <p class="sysdesc">Isi yang sama dengan web, terbuka layar penuh dari ikon di HP, dengan bunyi saat laku jumbo.</p>
       <p class="sysrole"><b>Paling cocok untuk:</b> memantau live seharian.</p>
     </article>
   </div>
-  <div class="syslink">
-    <span>Masuk dengan akun Telegram, tanpa password baru</span>
-    <span>Data yang sama di ketiga sistem</span>
-    <span>Login web aman: dibatasi 1 perangkat</span>
-    <span>Terkunci otomatis bila langganan habis</span>
-  </div>
-</div>
-</section>
-
-<!-- KELEBIHAN WEB & APLIKASI -->
-<section class="sec mist" id="webapp">
-<div class="wrap">
-  <div class="head">
-    <p class="kicker">Kelebihan Web &amp; Aplikasi</p>
-    <h2>Lebih lengkap dari pesan Telegram</h2>
-    <p class="lead">Pesan Telegram punya batas panjang, jadi sebagian data harus diringkas. Di web dan aplikasi, semua data tampil utuh: tabel, grafik, filter, dan profil merchant, diperbarui otomatis setiap ±15 detik.</p>
-  </div>
-
-  <div class="show">
+  <div class="show" id="webapp" style="margin-top:96px">
     <div>
-      <p class="kicker">Web Member · app.sheanbot.com</p>
+      <p class="kicker">Kelebihan Web Member · app.sheanbot.com</p>
       <h2>Semua bank dan semua nominal dalam satu layar</h2>
       <p class="lead">Lihat harga iklan beli paling atas untuk setiap bank di setiap nominal sekaligus, lalu ketuk untuk melihat harga yang perlu Anda pasang agar jadi nomor satu.</p>
       <ul class="ticks">
-        <li><span><b>Tanpa diringkas:</b> semua bank tampil, bukan hanya beberapa teratas seperti di pesan Telegram.</span></li>
+        <li><span><b>Tanpa diringkas:</b> pesan Telegram ada batas panjangnya, di web semua bank tampil.</span></li>
         <li><span><b>Live tiap ±15 detik:</b> halaman memperbarui sendiri, tanpa menekan tombol.</span></li>
         <li><span><b>Riwayat 90 hari:</b> cari berdasarkan bank, nama merchant, status verifikasi, atau minimal USDT.</span></li>
         <li><span><b>Profil merchant:</b> stok, harga, posisi harga, order 30 hari, volume harian, dan jam paling ramai.</span></li>
@@ -705,14 +661,14 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 
   <div class="show rev">
     <div>
-      <p class="kicker">Aplikasi di HP</p>
+      <p class="kicker">Kelebihan Aplikasi</p>
       <h2>Ikon Sheanbot di layar HP, bunyi saat laku jumbo</h2>
       <p class="lead">Pasang langsung dari browser dalam 3 ketukan, tanpa App Store atau Play Store. Sheanbot terbuka layar penuh seperti aplikasi biasa.</p>
       <ul class="ticks">
         <li><span><b>Laku jumbo bersuara:</b> bunyi khusus dan banner merah saat ada penjualan di atas ambang pilihan Anda, misalnya 5.000 USDT.</span></li>
         <li><span><b>Angka bergerak live:</b> harga terbaik, teks berjalan penjualan terbaru, dan peluang harga tinggi.</span></li>
         <li><span><b>Sekali ketuk:</b> langsung dari layar utama, tidak perlu mencari chat bot dulu.</span></li>
-        <li><span><b>Atur semuanya di satu tempat:</b> exchange, Jual/Stok, nominal, minimal penjualan, merchant favorit, dan alert.</span></li>
+        <li><span><b>Semua isi web ikut ada:</b> papan Nominal × Bank, riwayat, profil merchant, dan pengaturan.</span></li>
         <li><span><b>Telegram tetap jalan:</b> saat aplikasi ditutup, alert tetap masuk ke Telegram.</span></li>
       </ul>
     </div>
@@ -728,23 +684,11 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     </div>
   </div>
 
-  <div class="cmp">
-    <div class="cmp-h"><h3>Mana yang dipakai untuk apa?</h3><p>Semuanya termasuk dalam satu langganan. Pakai sesuai kebutuhan.</p></div>
-    <div class="cmp-scroll">
-    <table>
-      <thead><tr><th scope="col" style="text-align:left">Fitur</th><th scope="col">Telegram Bot</th><th scope="col">Web Member</th><th scope="col">Aplikasi</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">Alert masuk walau HP terkunci</th><td class="y">✓</td><td>–</td><td>–</td></tr>
-        <tr><th scope="row">Bunyi &amp; banner laku jumbo<small>saat halaman terbuka</small></th><td>notifikasi Telegram</td><td class="y">✓</td><td class="y">✓</td></tr>
-        <tr><th scope="row">Semua bank × semua nominal</th><td class="p">diringkas</td><td class="y">✓ lengkap</td><td class="y">✓ lengkap</td></tr>
-        <tr><th scope="row">Riwayat 90 hari + filter</th><td class="p">ringkasan</td><td class="y">✓</td><td class="y">✓</td></tr>
-        <tr><th scope="row">Profil detail merchant</th><td class="p">teks singkat</td><td class="y">✓</td><td class="y">✓</td></tr>
-        <tr><th scope="row">Unduh Excel/CSV</th><td class="y">✓</td><td class="y">✓</td><td class="p">via browser</td></tr>
-        <tr><th scope="row">Tampilan lebar di laptop</th><td>–</td><td class="y">✓</td><td>–</td></tr>
-        <tr><th scope="row">Tanpa login tambahan</th><td class="y">✓</td><td class="p">login Telegram</td><td class="p">login Telegram sekali</td></tr>
-      </tbody>
-    </table>
-    </div>
+  <div class="syslink" style="margin-top:72px">
+    <span>Masuk dengan akun Telegram, tanpa password baru</span>
+    <span>Data yang sama di ketiga sistem</span>
+    <span>Login web aman: dibatasi 1 perangkat</span>
+    <span>Terkunci otomatis bila langganan habis</span>
   </div>
 </div>
 </section>
@@ -1095,10 +1039,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <p class="lead">Pilih jenis pesan untuk melihat tampilannya dan penjelasan setiap baris. Nama merchant dan angka adalah ilustrasi.</p>
   </div>
   <div class="tabs" role="tablist" aria-label="Contoh pesan Sheanbot">
-    <button class="tab" role="tab" id="t6" aria-controls="p6" aria-selected="true">Peluang harga tinggi</button>
-    <button class="tab" role="tab" id="t7" aria-controls="p7" aria-selected="false">Rekomendasi harga</button>
-    <button class="tab" role="tab" id="t8" aria-controls="p8" aria-selected="false">Radar bank</button>
-    <button class="tab" role="tab" id="t9" aria-controls="p9" aria-selected="false">Stok USDT</button>
+    <button class="tab" role="tab" id="t9" aria-controls="p9" aria-selected="true">Stok USDT</button>
     <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="false">Alert laku besar</button>
     <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false">Iklan multi-bank</button>
     <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false">Rekomendasi bank</button>
@@ -1106,95 +1047,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <button class="tab" role="tab" id="t5" aria-controls="p5" aria-selected="false">Menu utama</button>
   </div>
 
-  <div class="tp" role="tabpanel" id="p6" aria-labelledby="t6">
-    <div>
-      <h3>Peluang harga tinggi</h3>
-      <p>Dikirim saat dalam 15 menit banyak USDT laku di harga jauh di atas rata-rata 3 jam, dari beberapa merchant sekaligus.</p>
-      <ol class="anno">
-        <li><div><b>Volume dan jumlah merchant</b> menunjukkan ini momentum pasar, bukan satu transaksi kebetulan.</div></li>
-        <li><div><b>Selisih dari rata-rata</b>: seberapa jauh harga laku sekarang di atas biasanya.</div></li>
-        <li><div><b>Antrian</b>: berapa iklan yang lebih murah. Makin sedikit, makin cepat giliran Anda.</div></li>
-        <li><div><b>Spread</b> dihitung dari modal Anda atau harga beli P2P teratas.</div></li>
-        <li><div><b>Saran harga</b> untuk dipasang selama momentum, dan kapan menurunkannya lagi.</div></li>
-      </ol>
-    </div>
-    <div class="chatbox"><div class="bub">
-      <div class="t">🔥 PELUANG HARGA TINGGI</div>
-      <div>🟡 Binance P2P • USDT/IDR</div>
-      <div class="sp"></div>
-      <div>📈 15 menit terakhir: 17,092 USDT laku di harga tinggi (9x dari 5 merchant)</div>
-      <div>💵 Harga laku: Rp18,484 (rata-rata 3 jam Rp18,450 → +34)</div>
-      <div>🏷️ Harga jual termurah sekarang: Rp18,432</div>
-      <div>🚶 Antrian lebih murah dari Rp18,484: 79 iklan, 845,621 USDT</div>
-      <div>🏦 Banyak laku lewat: Bank Mandiri, BCA, Bank BRI</div>
-      <div>💰 Spread dari modal kamu Rp18,300: Rp184 (1.01%) ≈ Rp184,000 per 1.000 USDT</div>
-      <div class="sp"></div>
-      <div>💡 Saran: pertimbangkan pasang di sekitar <b>Rp18,484</b> selama momentum berlangsung. Kalau penjualan di harga ini berhenti, turunkan lagi mendekati rata-rata.</div>
-      <div>⚠️ Momentum bisa hilang dalam hitungan menit. Ini perkiraan dari penjualan tercatat, bukan jaminan.</div>
-      <div class="tm">17:06</div>
-    </div></div>
-  </div>
-
-  <div class="tp" role="tabpanel" id="p7" aria-labelledby="t7" hidden>
-    <div>
-      <h3>Rekomendasi harga jual</h3>
-      <p>Buka kapan saja lewat menu Pasar &amp; Merchant atau ketik /rekomharga. Dihitung dari penjualan terverifikasi 3 jam terakhir.</p>
-      <ol class="anno">
-        <li><div><b>Cepat laku</b>: 75% volume laku di harga ini atau lebih mahal.</div></li>
-        <li><div><b>Seimbang</b>: setengah volume laku di harga ini ke atas.</div></li>
-        <li><div><b>Spread maksimal</b>: hanya 15% teratas, untung terbesar tapi lebih lama laku.</div></li>
-        <li><div><b>Bank yang laku lebih mahal</b> dari rata-rata ikut ditampilkan.</div></li>
-      </ol>
-    </div>
-    <div class="chatbox"><div class="bub">
-      <div class="t">💡 REKOMENDASI HARGA JUAL</div>
-      <div>🟡 Binance P2P • USDT/IDR</div>
-      <div class="sp"></div>
-      <div>📊 Dasar: 182,400 USDT terjual di harga pasti, 3 jam terakhir</div>
-      <div>💵 Harga laku: Rp18,430 – Rp18,500 • rata-rata Rp18,452 • 1 jam terakhir ▲ +6</div>
-      <div>🧮 Spread dihitung dari modal kamu: Rp18,300</div>
-      <div class="sp"></div>
-      <div><b>🟢 Cepat laku: Rp18,446</b></div>
-      <div class="ind">✅ 87% volume laku di harga ini atau lebih mahal</div>
-      <div class="ind">💰 Spread Rp146 (0.80%)</div>
-      <div><b>🟡 Seimbang: Rp18,458</b></div>
-      <div class="ind">✅ 50% volume • 💰 Spread Rp158 (0.86%)</div>
-      <div><b>🔴 Spread maksimal: Rp18,476</b></div>
-      <div class="ind">✅ 15% volume • 💰 Spread Rp176 (0.96%)</div>
-      <div class="sp"></div>
-      <div>🏦 Laku lebih mahal: DANA (+12), SeaBank (+8)</div>
-      <div class="tm">17:20</div>
-    </div></div>
-  </div>
-
-  <div class="tp" role="tabpanel" id="p8" aria-labelledby="t8" hidden>
-    <div>
-      <h3>Radar bank</h3>
-      <p>Dikirim otomatis saat banyak merchant yang masih aktif tiba-tiba menghapus bank yang sama dari iklannya. Buka laporannya kapan saja dengan /radarbank.</p>
-      <ol class="anno">
-        <li><div><b>Sebelum → sesudah</b>: jumlah merchant yang menerima bank itu, dibanding ±30 menit lalu.</div></li>
-        <li><div><b>Dibanding pasar</b>: kalau semua bank turun bersamaan, itu pasar sepi, bukan masalah bank.</div></li>
-        <li><div><b>Menghapus vs iklan mati</b>: yang penting adalah merchant yang masih berjualan tapi membuang bank itu.</div></li>
-        <li><div><b>Saran tindakan</b>: nonaktifkan bank sementara dan cek info resmi. Pesan ✅ Bank pulih menyusul saat normal.</div></li>
-      </ol>
-    </div>
-    <div class="chatbox"><div class="bub">
-      <div class="t">🚨 POTENSI MASALAH BANK: SeaBank</div>
-      <div>🟡 Binance P2P • 28 menit terakhir</div>
-      <div class="sp"></div>
-      <div>👥 Merchant menerima SeaBank: 26 → 14 (▼ 46%)</div>
-      <div>📊 Pasar keseluruhan: 214 → 206 merchant (▼ 4%)</div>
-      <div>🔻 12 merchant berhenti menerima SeaBank:</div>
-      <div class="ind">• 9 masih aktif tapi MENGHAPUS SeaBank dari iklannya</div>
-      <div class="ind">• 3 tidak terlihat lagi (iklan mati)</div>
-      <div class="sp"></div>
-      <div>💡 Bisa jadi gangguan atau pemblokiran rekening SeaBank. Pertimbangkan menonaktifkan SeaBank di iklan Anda sementara, dan cek info resmi bank.</div>
-      <div>ℹ️ Sinyal dari perubahan iklan merchant, bukan konfirmasi resmi bank.</div>
-      <div class="tm">15:42</div>
-    </div></div>
-  </div>
-
-  <div class="tp" role="tabpanel" id="p9" aria-labelledby="t9" hidden>
+  <div class="tp" role="tabpanel" id="p9" aria-labelledby="t9">
     <div>
       <h3>Stok USDT: rekomendasi harga beli</h3>
       <p>Saat Anda memilih Stok USDT, semua data beralih ke merchant yang membeli USDT. Rekomendasi membantu menentukan harga iklan beli Anda.</p>
@@ -1443,7 +1296,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div class="plan-ex"><span class="exmark" style="background:var(--bybit)">B</span><div><b>Bybit P2P</b><span>USDT/IDR</span></div></div>
       </div>
       <ul>
-        <li><b>Telegram Bot</b></li><li><b>Web Member</b> (app.sheanbot.com)</li><li><b>Aplikasi di HP</b></li><li>Jual USDT &amp; Stok USDT</li><li>Peluang harga tinggi &amp; beli murah</li><li>Rekomendasi harga jual &amp; beli</li><li>Alert laku jumbo bersuara</li><li>Papan Nominal × Bank live</li><li>Profil detail merchant</li><li>Radar Bank (deteksi bank bermasalah)</li><li>Syarat merchant (usia akun, KYC, dll.)</li><li>Alert penjualan besar</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence</li><li>Ranking &amp; tren bank</li>
+        <li><b>Telegram Bot</b></li><li><b>Web Member</b> (app.sheanbot.com)</li><li><b>Aplikasi di HP</b></li><li>Jual USDT &amp; Stok USDT</li><li>Peluang harga tinggi &amp; beli murah</li><li>Rekomendasi harga jual &amp; beli</li><li>Papan Nominal × Bank live</li><li>Profil detail merchant</li><li>Radar Bank (deteksi bank bermasalah)</li><li>Syarat merchant (usia akun, KYC, dll.)</li><li>Alert penjualan besar &amp; laku jumbo bersuara</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence (ranking &amp; tren bank)</li>
         <li>Merchant favorit</li><li>Alert harga</li><li>Filter bank</li><li>Grafik harga &amp; volume</li>
         <li>Pola pasar</li><li>Riwayat 90 hari</li><li>Laporan harian &amp; mingguan</li><li>Export CSV</li><li>Update fitur gratis</li><li>Dukungan admin</li>
       </ul>
@@ -1498,7 +1351,6 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <details><summary>Apakah rekomendasi harga menjamin iklan saya laku?</summary><p>Tidak. Rekomendasi dan alert peluang dihitung dari penjualan yang sudah terjadi, sebagai bahan pertimbangan. Harga P2P bisa berubah dalam hitungan menit, jadi tetap cek kondisi pasar sebelum memasang harga.</p></details>
     <details><summary>Apakah Radar Bank bisa memastikan suatu bank sedang memblokir rekening?</summary><p>Tidak bisa memastikan, karena bot tidak punya akses ke data bank. Radar Bank membaca perilaku merchant: kalau banyak merchant aktif serentak menghapus bank yang sama, itu sinyal kuat ada masalah. Gunakan sebagai peringatan dini, lalu cek info resmi bank. Bank yang tidak ditandai juga belum tentu aman.</p></details>
     <details><summary>Syarat merchant apa saja yang bisa dibaca?</summary><p>Usia akun pembeli minimal, KYC wajib, minimal jumlah order dan tingkat penyelesaian pembeli, batas waktu bayar, serta minimal dan maksimal nominal per order, sejauh data itu dikirim exchange. Ringkasannya ada di menu 📋 Syarat Merchant, dan detail per merchant bisa dicari dengan /merchant NAMA. Kalau suatu syarat tidak dikirim exchange, bot menulis "Data tidak tersedia", bukan menebak.</p></details>
-    <details><summary>Apa saja yang saya dapat dalam satu langganan?</summary><p>Tiga sistem sekaligus: <b>Telegram Bot</b> untuk alert dan menu, <b>Web Member</b> di app.sheanbot.com untuk data lengkap (semua bank × nominal, riwayat 90 hari, profil merchant, unduh Excel), dan <b>Aplikasi</b> berupa ikon Sheanbot di layar HP. Semuanya memakai data yang sama dan tidak ada biaya tambahan.</p></details>
     <details><summary>Bagaimana cara membuka web member dan memasang aplikasinya?</summary><p>Di bot, ketik /web atau tekan 📱 Buka Web / Aplikasi. Dari dalam Telegram web langsung terbuka tanpa login. Di browser, buka app.sheanbot.com/app lalu pilih "Masuk dengan Telegram". Untuk memasang aplikasi: iPhone lewat Safari → Bagikan → Tambah ke Layar Utama; Android lewat Chrome → ⋮ → Instal aplikasi. Tidak perlu unduh dari App Store atau Play Store.</p></details>
     <details><summary>Apakah login web member bisa dipinjamkan?</summary><p>Tidak. Login memakai akun Telegram yang berlangganan, web hanya bisa login di satu perangkat (login di perangkat baru mengeluarkan perangkat lama, dan Anda diberi tahu di Telegram), dan akses terkunci otomatis begitu masa aktif habis.</p></details>
     <details><summary>Bisakah bot menunjukkan bank yang dipakai pembeli?</summary><p>Tidak, karena exchange tidak membuka informasi itu. Bank dipastikan hanya bila iklan menerima satu bank saja. Untuk iklan multi-bank, semua metode ditampilkan sebagai kandidat.</p></details>
@@ -1549,7 +1401,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <p style="max-width:48ch">Sheanbot tidak berafiliasi dengan Binance atau Bybit. Bukan saran keuangan atau investasi. Data berasal dari sumber publik dan dapat berubah, tertunda, atau tidak lengkap.</p>
     </div>
     <nav aria-label="Tautan footer">
-      <a href="#sistem">3 Sistem</a><a href="#webapp">Web &amp; Aplikasi</a><a href="#peluang">Peluang harga</a><a href="#stok">Jual &amp; Stok</a><a href="#radar">Radar Bank</a><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+      <a href="#sistem">3 Sistem</a><a href="#peluang">Peluang harga</a><a href="#stok">Jual &amp; Stok</a><a href="#radar">Radar Bank</a><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
     </nav>
   </div>
   <div class="copy"><span>© <span id="yr">2026</span> Sheanbot</span><span>sheanbot.com</span></div>
