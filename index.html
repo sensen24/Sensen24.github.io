@@ -329,6 +329,19 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 .upd-log li b{display:block;font-size:15.5px}
 .upd-log li span{display:block;font-size:14px;color:var(--ink-2)}
 @media (max-width:960px){.upd-grid{grid-template-columns:minmax(0,1fr);gap:36px}}
+/* jual & stok */
+.sgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.scard{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;display:flex;flex-direction:column;gap:18px}
+.scard.buy{border:2px solid var(--blue)}
+.scard-h{display:flex;gap:14px;align-items:center}
+.sic{font-size:26px;width:48px;height:48px;border-radius:14px;background:var(--mist);display:grid;place-items:center;flex-shrink:0}
+.scard-h h3{font-size:21px}.scard-h p{color:var(--ink-3);font-size:15px}
+.sl{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sl li{position:relative;padding-left:30px;color:var(--ink-2);font-size:15.5px}
+.sl li::before{content:"";position:absolute;left:0;top:2px;width:22px;height:22px;border-radius:50%;background:var(--blue-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.4l3.2 3.2L17 8.8' fill='none' stroke='%231D4ED8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat}
+.sl b{color:var(--ink)}
+.snote{margin-top:28px;color:var(--ink-2);font-size:15.5px;max-width:80ch}
+@media (max-width:960px){.sgrid{grid-template-columns:minmax(0,1fr)}}
 /* peluang & rekomendasi */
 .opp-sec{background:var(--navy);color:#fff}
 .opp-sec .lead{color:#C2CEE4}.opp-sec .lead b{color:#fff}
@@ -432,7 +445,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div>
       <span class="chip"><span class="dot"><i></i></span>Bot Telegram untuk merchant P2P USDT/IDR</span>
       <h1>Jualan P2P lebih untung, tanpa menebak pasar.</h1>
-      <p class="lead">Sheanbot memantau semua iklan P2P Binance dan Bybit setiap 15 detik. Anda tahu siapa yang sedang laku, harga jual yang paling menguntungkan, dan bank yang mulai bermasalah, langsung di Telegram.</p>
+      <p class="lead">Sheanbot memantau semua iklan P2P Binance dan Bybit setiap 15 detik, baik saat Anda menjual maupun menambah stok USDT. Anda tahu siapa yang sedang laku, harga yang paling menguntungkan, dan bank yang mulai bermasalah, langsung di Telegram.</p>
       <div class="cta-row">
         <a class="btn" href="#harga">Mulai berlangganan</a>
         <a class="btn-ghost" href="#peluang">Lihat keunggulan</a>
@@ -535,6 +548,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Pasang harga dengan feeling: terlalu murah rugi spread, terlalu mahal tidak laku.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Baru tahu ada bank bermasalah setelah rekening sendiri ikut diblokir.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Tidak tahu syarat pembeli apa yang dipakai merchant yang laris.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Menebak harga beli saat menambah stok USDT.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Membuka Binance dan Bybit bergantian untuk membandingkan.</li>
       </ul>
     </div>
@@ -550,6 +564,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Rekomendasi harga jual dan alert saat harga tinggi sedang laku.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Radar Bank: peringatan saat merchant serentak menghapus suatu bank.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Syarat pembeli tiap merchant terbaca: usia akun, KYC, minimal order.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Stok USDT: lihat merchant yang membeli dan rekomendasi harga beli.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Pindah Binance ↔ Bybit dengan satu tombol di menu bot.</li>
       </ul>
     </div>
@@ -622,6 +637,58 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div><b class="why-n">Tepat waktu</b><p><strong>Tahu kapan naik dan kapan turun.</strong> Naikkan harga saat pembeli ramai, turunkan lagi saat penjualan di harga itu berhenti.</p></div>
   </div>
   <p class="opp-note">Semua rekomendasi dihitung dari penjualan yang tercatat dan terverifikasi. Gunakan sebagai bahan pertimbangan, bukan jaminan laku atau saran investasi, karena harga P2P bisa berubah dalam hitungan menit.</p>
+</div>
+</section>
+
+<!-- JUAL & STOK -->
+<section class="sec mist" id="stok">
+<div class="wrap">
+  <div class="head">
+    <p class="kicker">Jual USDT &amp; Stok USDT</p>
+    <h2>Untuk merchant dua arah: saat menjual dan saat menambah stok</h2>
+    <p class="lead">Merchant tidak hanya menjual USDT, tapi juga harus membeli lagi untuk stok. Sheanbot memantau keduanya. Pilih <b>Jual USDT</b> untuk melihat merchant yang menjual, atau <b>Stok USDT</b> untuk melihat merchant yang membeli lewat iklan beli. Pindah kapan saja dengan satu tombol.</p>
+  </div>
+  <div class="sgrid">
+    <article class="scard">
+      <div class="scard-h"><span class="sic">🟢</span><div><h3>Jual USDT</h3><p>Pantau merchant yang menjual USDT</p></div></div>
+      <ul class="sl">
+        <li>Alert <b>laku besar</b> lengkap dengan harga dan bank</li>
+        <li><b>Rekomendasi harga jual</b>: cepat laku, seimbang, spread maksimal</li>
+        <li><b>Peluang harga tinggi</b> saat pembeli mau membayar lebih mahal</li>
+        <li>Spread dihitung dari modal Anda</li>
+      </ul>
+      <div class="chatbox"><div class="bub">
+        <div class="t">🔥 LAKU BESAR</div>
+        <div>👤 Merchant: CONTOH_MERCHANT</div>
+        <div>💰 Terjual: 2,490 USDT</div>
+        <div>✅ Terkonfirmasi: jumlah order merchant naik +1</div>
+        <div>💵 Harga: Rp16,842 ✅ pasti</div>
+        <div>📦 Sisa stok iklan: 7,510 USDT</div>
+        <div>🏦 Bank: BCA ✅ pasti</div>
+        <div class="tm">19:28</div>
+      </div></div>
+    </article>
+    <article class="scard buy">
+      <div class="scard-h"><span class="sic">🛒</span><div><h3>Stok USDT</h3><p>Pantau merchant yang membeli USDT</p></div></div>
+      <ul class="sl">
+        <li>Alert <b>beli besar</b>: siapa yang membeli, berapa banyak, di harga berapa</li>
+        <li><b>Rekomendasi harga beli</b>: cepat terisi, seimbang, hemat maksimal</li>
+        <li><b>Peluang beli murah</b> saat penjual mau melepas USDT lebih murah dari biasanya</li>
+        <li>Spread dihitung otomatis ke harga jual termurah pasar</li>
+      </ul>
+      <div class="chatbox"><div class="bub">
+        <div class="t">🛒 BELI BESAR</div>
+        <div>👤 Merchant: CONTOH_BUYER</div>
+        <div>💰 Dibeli: 4,500 USDT</div>
+        <div>✅ Terkonfirmasi: jumlah order merchant naik +1</div>
+        <div>💵 Harga: Rp16,778 ✅ pasti</div>
+        <div>📦 Sisa kuota beli iklan: 35,500 USDT</div>
+        <div>🏦 Bank: BCA ✅ pasti</div>
+        <div class="tm">19:30</div>
+      </div></div>
+    </article>
+  </div>
+  <p class="snote">Kedua sisi di Binance dan Bybit dipantau bersamaan, jadi datanya langsung siap saat Anda pindah. Laporan, Radar Bank, syarat merchant, grafik, dan aplikasi semuanya mengikuti sisi yang Anda pilih. Satu langganan sudah termasuk semuanya.</p>
 </div>
 </section>
 
@@ -878,6 +945,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <button class="tab" role="tab" id="t6" aria-controls="p6" aria-selected="true">Peluang harga tinggi</button>
     <button class="tab" role="tab" id="t7" aria-controls="p7" aria-selected="false">Rekomendasi harga</button>
     <button class="tab" role="tab" id="t8" aria-controls="p8" aria-selected="false">Radar bank</button>
+    <button class="tab" role="tab" id="t9" aria-controls="p9" aria-selected="false">Stok USDT</button>
     <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="false">Alert laku besar</button>
     <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false">Iklan multi-bank</button>
     <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false">Rekomendasi bank</button>
@@ -970,6 +1038,35 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <div>💡 Bisa jadi gangguan atau pemblokiran rekening SeaBank. Pertimbangkan menonaktifkan SeaBank di iklan Anda sementara, dan cek info resmi bank.</div>
       <div>ℹ️ Sinyal dari perubahan iklan merchant, bukan konfirmasi resmi bank.</div>
       <div class="tm">15:42</div>
+    </div></div>
+  </div>
+
+  <div class="tp" role="tabpanel" id="p9" aria-labelledby="t9" hidden>
+    <div>
+      <h3>Stok USDT: rekomendasi harga beli</h3>
+      <p>Saat Anda memilih Stok USDT, semua data beralih ke merchant yang membeli USDT. Rekomendasi membantu menentukan harga iklan beli Anda.</p>
+      <ol class="anno">
+        <li><div><b>Harga beli tertinggi</b> yang sedang dipasang merchant lain.</div></li>
+        <li><div><b>Cepat terisi</b>: 75% volume dibeli di harga ini ke bawah, jadi iklan beli Anda cepat didatangi penjual.</div></li>
+        <li><div><b>Hemat maksimal</b>: lebih murah, tapi lebih lama terisi.</div></li>
+        <li><div><b>Spread</b> dihitung ke harga jual termurah pasar.</div></li>
+      </ol>
+    </div>
+    <div class="chatbox"><div class="bub">
+      <div class="t">💡 REKOMENDASI HARGA BELI (STOK USDT)</div>
+      <div>🟡 Binance P2P · Stok USDT • USDT/IDR</div>
+      <div class="sp"></div>
+      <div>📊 Dasar: 33,450 USDT dibeli merchant di harga pasti, 3 jam terakhir</div>
+      <div>🏷️ Harga beli tertinggi sekarang: Rp16,790</div>
+      <div>🧮 Spread dihitung ke harga JUAL termurah pasar: Rp16,820</div>
+      <div class="sp"></div>
+      <div><b>🟢 Cepat terisi: Rp16,786</b></div>
+      <div class="ind">💰 Spread Rp34 (0.20%)</div>
+      <div><b>🟡 Seimbang: Rp16,782</b></div>
+      <div class="ind">💰 Spread Rp38 (0.23%)</div>
+      <div><b>🔴 Hemat maksimal: Rp16,774</b></div>
+      <div class="ind">💰 Spread Rp46 (0.27%)</div>
+      <div class="tm">19:30</div>
     </div></div>
   </div>
 
@@ -1103,7 +1200,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <span class="full">🧠 Merchant Bank Intelligence</span>
         <span>🔔 Alert Pintar</span><span>📉 Analisis &amp; Grafik</span>
         <span>⏱️ Periode: 24 jam</span><span>⚙️ Pengaturan</span>
-        <span class="full">🔄 Ganti Exchange · 🟡 Binance</span>
+        <span class="full">🔄 Ganti · 🟡 Binance · 🟢 Jual USDT</span>
         <span>📤 Export CSV</span><span>📡 Status</span>
         <span class="full">💳 Langganan</span>
       </div>
@@ -1156,6 +1253,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <li><b>💡 Rekomendasi Harga Jual</b><span>Tiga pilihan harga dari penjualan nyata, lengkap dengan spread.</span></li>
       <li><b>📡 Radar Bank</b><span>Peringatan dini saat merchant serentak meninggalkan suatu bank.</span></li>
       <li><b>📱 Aplikasi di HP</b><span>Tampilan live, plus bunyi khusus saat ada laku jumbo.</span></li>
+      <li><b>🛒 Stok USDT</b><span>Pantau merchant yang membeli USDT, lengkap dengan rekomendasi harga beli.</span></li>
       <li><b>⚡ Pemindaian tiap 15 detik</b><span>Dua kali lebih cepat, dengan pembacaan ulang iklan yang terlewat.</span></li>
       <li><b>🗂️ Riwayat 90 hari</b><span>Laporan, grafik, dan tren bank sampai 90 hari ke belakang.</span></li>
     </ol>
@@ -1167,8 +1265,8 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 <section class="sec mist" id="harga">
 <div class="wrap">
   <div class="head">
-    <h2>Satu langganan, dua exchange</h2>
-    <p class="lead">Semua fitur, Binance P2P dan Bybit P2P, dalam satu bot. Pilih bayar bulanan, atau ambil paket 3 bulan dan hemat Rp460.000. Tanpa biaya tambahan.</p>
+    <h2>Satu langganan, dua exchange, dua arah</h2>
+    <p class="lead">Semua fitur, Binance P2P dan Bybit P2P, sisi jual dan stok, dalam satu bot. Pilih bayar bulanan, atau ambil paket 3 bulan dan hemat Rp460.000. Tanpa biaya tambahan.</p>
   </div>
   <div class="price-wrap">
     <div class="plan">
@@ -1192,7 +1290,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div class="plan-ex"><span class="exmark" style="background:var(--bybit)">B</span><div><b>Bybit P2P</b><span>USDT/IDR</span></div></div>
       </div>
       <ul>
-        <li>Peluang harga tinggi</li><li>Rekomendasi harga jual</li><li>Alert laku jumbo bersuara</li><li>Aplikasi di HP</li><li>Radar Bank (deteksi bank bermasalah)</li><li>Syarat merchant (usia akun, KYC, dll.)</li><li>Alert penjualan besar</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence</li><li>Ranking &amp; tren bank</li>
+        <li>Jual USDT &amp; Stok USDT</li><li>Peluang harga tinggi &amp; beli murah</li><li>Rekomendasi harga jual &amp; beli</li><li>Alert laku jumbo bersuara</li><li>Aplikasi di HP</li><li>Radar Bank (deteksi bank bermasalah)</li><li>Syarat merchant (usia akun, KYC, dll.)</li><li>Alert penjualan besar</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence</li><li>Ranking &amp; tren bank</li>
         <li>Merchant favorit</li><li>Alert harga</li><li>Filter bank</li><li>Grafik harga &amp; volume</li>
         <li>Pola pasar</li><li>Riwayat 90 hari</li><li>Laporan harian &amp; mingguan</li><li>Export CSV</li><li>Update fitur gratis</li><li>Dukungan admin</li>
       </ul>
@@ -1225,7 +1323,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <li><div class="num">1</div><h3>Hubungi admin</h3><p>Chat <a href="https://t.me/sheantu88">@sheantu88</a>. Admin mengirim link bot dan info pembayaran.</p></li>
     <li><div class="num">2</div><h3>Lakukan pembayaran</h3><p>Transfer sesuai paket: Rp820.000 untuk 1 bulan atau Rp2.000.000 untuk 3 bulan, ke info pembayaran di bot.</p></li>
     <li><div class="num">3</div><h3>Kirim bukti</h3><p>Kirim foto atau screenshot bukti transfer langsung ke chat bot.</p></li>
-    <li><div class="num">4</div><h3>Pilih exchange</h3><p>Setelah aktif, pilih Binance atau Bybit. Ganti kapan saja lewat menu.</p></li>
+    <li><div class="num">4</div><h3>Pilih exchange &amp; sisi</h3><p>Setelah aktif, pilih Binance atau Bybit, lalu Jual USDT atau Stok USDT. Ganti kapan saja lewat menu.</p></li>
   </ol>
 </div>
 </section>
@@ -1240,8 +1338,9 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
   <div>
     <details><summary>Apakah saya perlu memberi API key atau password exchange?</summary><p>Tidak. Sheanbot hanya membaca daftar iklan P2P yang tampil publik. Bot tidak bisa mengakses akun, dana, atau order Anda.</p></details>
     <details><summary>Apakah saya perlu memasang sesuatu?</summary><p>Tidak wajib. Cukup Telegram di HP atau komputer. Setelah akses aktif, buka bot dan ketik /start. Ikon aplikasi di layar HP bersifat opsional.</p></details>
-    <details><summary>Bagaimana cara memilih Binance atau Bybit?</summary><p>Saat pertama membuka bot, Anda diminta memilih exchange. Setelah itu ganti kapan saja lewat tombol 🔄 Ganti Exchange di menu. Keduanya dipantau bersamaan, jadi data langsung tersedia saat Anda pindah.</p></details>
+    <details><summary>Bagaimana cara memilih Binance atau Bybit?</summary><p>Saat pertama membuka bot, Anda memilih exchange (Binance atau Bybit), lalu jenis pantauan (Jual USDT atau Stok USDT). Setelah itu ganti kapan saja lewat tombol 🔄 Ganti di menu. Semuanya dipantau bersamaan, jadi data langsung tersedia saat Anda pindah.</p></details>
     <details><summary>Seberapa akurat datanya?</summary><p>Harga, stok, dan metode pembayaran dibaca langsung. Penjualan dihitung dari penurunan stok lalu dikonfirmasi lewat kenaikan jumlah order merchant. Data yang tidak dibuka exchange ditulis "tidak tersedia".</p></details>
+    <details><summary>Apa bedanya Jual USDT dan Stok USDT?</summary><p>Jual USDT memantau merchant yang menjual USDT: cocok saat Anda menjual dan ingin tahu harga jual yang laku. Stok USDT memantau merchant yang membeli USDT lewat iklan beli: cocok saat Anda menambah stok dan ingin tahu harga beli yang sedang dibayar merchant lain. Keduanya termasuk dalam satu langganan dan bisa diganti kapan saja.</p></details>
     <details><summary>Bagaimana bot tahu harga mana yang laku?</summary><p>Setiap penjualan yang terdeteksi dicatat beserta harganya. Rekomendasi harga hanya memakai penjualan yang harganya pasti dan sudah terverifikasi, lalu dihitung dari volume yang laku di tiap harga dalam 3 jam terakhir (diperluas ke 6 atau 24 jam bila pasar sepi).</p></details>
     <details><summary>Apakah rekomendasi harga menjamin iklan saya laku?</summary><p>Tidak. Rekomendasi dan alert peluang dihitung dari penjualan yang sudah terjadi, sebagai bahan pertimbangan. Harga P2P bisa berubah dalam hitungan menit, jadi tetap cek kondisi pasar sebelum memasang harga.</p></details>
     <details><summary>Apakah Radar Bank bisa memastikan suatu bank sedang memblokir rekening?</summary><p>Tidak bisa memastikan, karena bot tidak punya akses ke data bank. Radar Bank membaca perilaku merchant: kalau banyak merchant aktif serentak menghapus bank yang sama, itu sinyal kuat ada masalah. Gunakan sebagai peringatan dini, lalu cek info resmi bank. Bank yang tidak ditandai juga belum tentu aman.</p></details>
@@ -1295,7 +1394,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <p style="max-width:48ch">Sheanbot tidak berafiliasi dengan Binance atau Bybit. Bukan saran keuangan atau investasi. Data berasal dari sumber publik dan dapat berubah, tertunda, atau tidak lengkap.</p>
     </div>
     <nav aria-label="Tautan footer">
-      <a href="#peluang">Peluang harga</a><a href="#radar">Radar Bank</a><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+      <a href="#peluang">Peluang harga</a><a href="#stok">Jual &amp; Stok</a><a href="#radar">Radar Bank</a><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
     </nav>
   </div>
   <div class="copy"><span>© <span id="yr">2026</span> Sheanbot</span><span>sheanbot.com</span></div>
