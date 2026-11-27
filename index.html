@@ -313,6 +313,22 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 .popt.best{background:#1B3266;border:2px solid #5C87FF;padding-top:22px}
 .pbadge{position:absolute;top:-11px;left:16px;background:#5EE0AE;color:#05331F;font-style:normal;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px}
 .psave{flex-basis:100%;margin-top:-4px;font-size:14px;font-weight:700;color:#5EE0AE}
+/* terus diperbarui */
+.upd-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.upd-sec .lead{margin-top:16px}
+.upd-promise{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px}
+.upd-promise li{position:relative;padding-left:34px;color:var(--ink-2);font-size:16px}
+.upd-promise li::before{content:"";position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--blue-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.4l3.2 3.2L17 8.8' fill='none' stroke='%231D4ED8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/24px no-repeat}
+.upd-promise b{color:var(--ink)}
+.upd-log{background:var(--mist);border-radius:var(--r-lg);padding:26px 28px}
+.upd-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.upd-h b{font-size:17px}.upd-h span{font-size:13px;color:var(--ink-3);font-weight:600}
+.upd-log ol{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--blue-100);display:grid;gap:16px}
+.upd-log li{position:relative}
+.upd-log li::before{content:"";position:absolute;left:-25px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 3px var(--mist)}
+.upd-log li b{display:block;font-size:15.5px}
+.upd-log li span{display:block;font-size:14px;color:var(--ink-2)}
+@media (max-width:960px){.upd-grid{grid-template-columns:minmax(0,1fr);gap:36px}}
 /* peluang & rekomendasi */
 .opp-sec{background:var(--navy);color:#fff}
 .opp-sec .lead{color:#C2CEE4}.opp-sec .lead b{color:#fff}
@@ -1120,6 +1136,33 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 </div>
 </section>
 
+<!-- TERUS DIPERBARUI -->
+<section class="sec upd-sec" id="update">
+<div class="wrap upd-grid">
+  <div>
+    <p class="kicker">Terus berkembang</p>
+    <h2>Terus diperbarui, makin pintar dari waktu ke waktu</h2>
+    <p class="lead">Sheanbot bukan bot yang dibuat sekali lalu ditinggal. Fitur baru dan perbaikan akurasi rutin ditambahkan, mengikuti perubahan pasar P2P dan masukan dari pelanggan.</p>
+    <ul class="upd-promise">
+      <li><b>Gratis untuk pelanggan aktif.</b> Setiap pembaruan langsung aktif di bot dan aplikasi Anda, tanpa biaya tambahan dan tanpa perlu memasang ulang.</li>
+      <li><b>Akurasi terus diasah.</b> Cara mendeteksi dan memverifikasi penjualan terus disempurnakan supaya datanya makin tepat.</li>
+      <li><b>Masukan Anda didengar.</b> Punya ide fitur? Sampaikan ke admin <a href="https://t.me/sheantu88">@sheantu88</a>. Fitur seperti Radar Bank lahir dari kebutuhan nyata merchant.</li>
+    </ul>
+  </div>
+  <div class="upd-log">
+    <div class="upd-h"><b>Pembaruan terbaru</b><span>November 2026</span></div>
+    <ol>
+      <li><b>🔥 Peluang Harga Tinggi</b><span>Alert saat pembeli mau membayar lebih mahal dari biasanya.</span></li>
+      <li><b>💡 Rekomendasi Harga Jual</b><span>Tiga pilihan harga dari penjualan nyata, lengkap dengan spread.</span></li>
+      <li><b>📡 Radar Bank</b><span>Peringatan dini saat merchant serentak meninggalkan suatu bank.</span></li>
+      <li><b>📱 Aplikasi di HP</b><span>Tampilan live, plus bunyi khusus saat ada laku jumbo.</span></li>
+      <li><b>⚡ Pemindaian tiap 15 detik</b><span>Dua kali lebih cepat, dengan pembacaan ulang iklan yang terlewat.</span></li>
+      <li><b>🗂️ Riwayat 90 hari</b><span>Laporan, grafik, dan tren bank sampai 90 hari ke belakang.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
 <!-- HARGA -->
 <section class="sec mist" id="harga">
 <div class="wrap">
@@ -1151,7 +1194,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <ul>
         <li>Peluang harga tinggi</li><li>Rekomendasi harga jual</li><li>Alert laku jumbo bersuara</li><li>Aplikasi di HP</li><li>Radar Bank (deteksi bank bermasalah)</li><li>Syarat merchant (usia akun, KYC, dll.)</li><li>Alert penjualan besar</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence</li><li>Ranking &amp; tren bank</li>
         <li>Merchant favorit</li><li>Alert harga</li><li>Filter bank</li><li>Grafik harga &amp; volume</li>
-        <li>Pola pasar</li><li>Riwayat 90 hari</li><li>Laporan harian &amp; mingguan</li><li>Export CSV</li><li>Dukungan admin</li>
+        <li>Pola pasar</li><li>Riwayat 90 hari</li><li>Laporan harian &amp; mingguan</li><li>Export CSV</li><li>Update fitur gratis</li><li>Dukungan admin</li>
       </ul>
       <a class="btn" href="https://t.me/sheantu88?text=Halo%20admin%2C%20saya%20mau%20berlangganan%20Sheanbot">
         <svg class="tg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.4 18.7 19.6c-.2 1-.9 1.3-1.7.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.3l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3.1c.9-.3 1.6.2 1.3 1.3z"/></svg>
@@ -1165,6 +1208,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21h4"/></svg></span><div><b>Pengingat otomatis</b><span>Bot mengirim pengingat 3 hari sebelum masa aktif habis.</span></div></div>
       <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><b>Satu akun Telegram</b><span>Akses berlaku untuk akun Telegram yang membayar.</span></div></div>
       <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><div><b>Tanpa akses ke akun Anda</b><span>Tidak perlu API key atau password exchange.</span></div></div>
+      <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span><div><b>Update fitur gratis</b><span>Fitur baru dan perbaikan langsung aktif selama langganan berjalan.</span></div></div>
     </div>
   </div>
 </div>
@@ -1208,6 +1252,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <details><summary>Apa bedanya paket 1 bulan dan 3 bulan?</summary><p>Fiturnya sama persis. Paket 3 bulan Rp2.000.000 untuk 90 hari, sekitar Rp667 ribu per bulan, jadi Anda hemat Rp460.000 dibanding membayar Rp820.000 tiga kali. Kalau masih ada sisa masa aktif, 90 hari ditambahkan setelah tanggal berakhir.</p></details>
     <details><summary>Berapa lama aktivasi setelah membayar?</summary><p>Akses diaktifkan setelah admin memeriksa bukti pembayaran yang Anda kirim ke bot. Bila belum aktif, hubungi @sheantu88.</p></details>
     <details><summary>Apa yang terjadi bila masa aktif habis?</summary><p>Menu dan alert berhenti, dan bot menampilkan info perpanjangan. Pengaturan Anda seperti merchant favorit dan filter bank tetap tersimpan saat Anda memperpanjang.</p></details>
+    <details><summary>Apakah bot akan terus diperbarui?</summary><p>Ya. Fitur baru dan perbaikan akurasi rutin ditambahkan, dan langsung aktif untuk semua pelanggan aktif tanpa biaya tambahan. Usulan fitur bisa disampaikan ke admin @sheantu88.</p></details>
     <details><summary>Apakah ini produk resmi Binance atau Bybit?</summary><p>Bukan. Sheanbot adalah layanan independen dan tidak berafiliasi dengan Binance maupun Bybit.</p></details>
     <details><summary>Apakah ini saran investasi?</summary><p>Bukan. Sheanbot menyajikan data sebagai bahan pertimbangan. Keputusan transaksi sepenuhnya tanggung jawab Anda.</p></details>
   </div>
