@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>Sheanbot — Bot Telegram Pemantau P2P Binance & Bybit</title>
+<title>Sheanbot — Bot Telegram untuk Merchant P2P Binance & Bybit</title>
 <meta name="description" content="Sheanbot memantau pasar P2P USDT/IDR di Binance dan Bybit setiap 15 detik: alert penjualan besar, peluang harga tinggi, rekomendasi harga jual, Radar Bank untuk deteksi dini bank bermasalah, dan aplikasi di HP.">
 <meta property="og:title" content="Sheanbot — Bot Telegram Pemantau P2P Binance & Bybit">
 <meta property="og:description" content="Alert penjualan besar, peluang harga tinggi, rekomendasi harga jual, radar bank, dan aplikasi di HP untuk P2P USDT/IDR.">
@@ -298,6 +298,9 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
   .mcta a{flex:1;min-height:48px;padding:10px 12px;font-size:15px}
   body{padding-bottom:78px}
 }
+.trust{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--ink-2);font-weight:600}
+.trust li{display:flex;align-items:center;gap:7px}
+.trust li::before{content:"";width:18px;height:18px;border-radius:50%;flex-shrink:0;background:var(--sold-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.4l3.2 3.2L17 8.8' fill='none' stroke='%230E7A55' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
 /* peluang & rekomendasi */
 .opp-sec{background:var(--navy);color:#fff}
 .opp-sec .lead{color:#C2CEE4}.opp-sec .lead b{color:#fff}
@@ -399,9 +402,9 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
   </svg>
   <div class="wrap hero-grid">
     <div>
-      <span class="chip"><span class="dot"><i></i></span>Bot Telegram untuk P2P USDT/IDR</span>
-      <h1>Tahu merchant mana yang laku, saat itu juga.</h1>
-      <p class="lead">Sheanbot memantau semua iklan P2P Binance dan Bybit setiap 15 detik. Anda langsung tahu siapa yang laku, harga berapa yang paling menguntungkan untuk dipasang, dan bank mana yang sedang bermasalah.</p>
+      <span class="chip"><span class="dot"><i></i></span>Bot Telegram untuk merchant P2P USDT/IDR</span>
+      <h1>Jualan P2P lebih untung, tanpa menebak pasar.</h1>
+      <p class="lead">Sheanbot memantau semua iklan P2P Binance dan Bybit setiap 15 detik. Anda tahu siapa yang sedang laku, harga jual yang paling menguntungkan, dan bank yang mulai bermasalah, langsung di Telegram.</p>
       <div class="cta-row">
         <a class="btn" href="#harga">Mulai berlangganan</a>
         <a class="btn-ghost" href="#peluang">Lihat keunggulan</a>
@@ -411,6 +414,11 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div class="exs"><i style="background:var(--binance)"></i><i style="background:var(--bybit)"></i><b>Binance &amp; Bybit</b></div>
         <div><b>Rp820.000</b> per 30 hari</div>
       </div>
+      <ul class="trust">
+        <li>Tanpa API key atau password exchange</li>
+        <li>Setiap penjualan diverifikasi otomatis</li>
+        <li>Dibantu admin langsung lewat Telegram</li>
+      </ul>
     </div>
 
     <div class="phone-col">
@@ -523,15 +531,15 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 <section class="sec opp-sec" id="peluang">
 <div class="wrap">
   <div class="head">
-    <p class="kicker k-lt">Baru · untuk merchant</p>
-    <h2>Pasang harga lebih tinggi, tanpa menebak</h2>
-    <p class="lead">Sheanbot mencatat di harga berapa USDT <b>benar-benar laku</b>, bukan sekadar harga yang dipasang. Dari situ bot memberi tahu kapan harga tinggi sedang laku, dan harga berapa yang masih masuk akal untuk Anda pasang.</p>
+    <p class="kicker k-lt">Fitur unggulan</p>
+    <h2>Pasang harga lebih tinggi, tetap laku</h2>
+    <p class="lead">Kebanyakan merchant hanya melihat harga yang dipasang orang lain. Sheanbot mencatat <b>harga yang benar-benar dibayar pembeli</b>, lalu memberi tahu kapan pembeli sedang mau membayar lebih mahal dan harga berapa yang masih laku untuk Anda pasang.</p>
   </div>
 
   <div class="opp-grid">
     <!-- Peluang -->
     <article class="ocard">
-      <div class="ocard-h"><span class="oic">🔥</span><div><h3>Peluang Harga Tinggi</h3><p>Alert otomatis saat banyak USDT laku jauh di atas rata-rata.</p></div></div>
+      <div class="ocard-h"><span class="oic">🔥</span><div><h3>Peluang Harga Tinggi</h3><p>Kabar langsung saat pembeli mau membayar lebih mahal dari biasanya.</p></div></div>
       <div class="chatbox dark"><div class="bub">
         <div class="t">🔥 PELUANG HARGA TINGGI</div>
         <div>🟡 Binance P2P • USDT/IDR</div>
@@ -546,15 +554,15 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div class="tm">17:06</div>
       </div></div>
       <ul class="oticks">
-        <li><b>Bukan alarm palsu:</b> minimal 3.000 USDT, 3 penjualan, dari 2 merchant berbeda dalam 15 menit, dan hanya penjualan yang sudah terverifikasi.</li>
-        <li><b>Langsung tahu harus pasang berapa,</b> berapa antrian iklan di bawah harga itu, dan bank apa yang paling laku.</li>
-        <li><b>Tidak berisik:</b> paling sering 30 menit sekali, kecuali harga naik lagi.</li>
+        <li><b>Bukan alarm palsu.</b> Alert hanya dikirim bila minimal 3.000 USDT laku dalam 15 menit, dari setidaknya 3 penjualan dan 2 merchant berbeda, semuanya sudah terverifikasi.</li>
+        <li><b>Langsung tahu harus pasang berapa,</b> berapa banyak iklan yang lebih murah dari harga itu, dan bank apa yang paling banyak dipakai.</li>
+        <li><b>Tidak berisik.</b> Paling sering 30 menit sekali, kecuali harganya naik lagi.</li>
       </ul>
     </article>
 
     <!-- Rekomendasi -->
     <article class="ocard">
-      <div class="ocard-h"><span class="oic">💡</span><div><h3>Rekomendasi Harga Jual</h3><p>Tiga pilihan harga dari penjualan 3 jam terakhir.</p></div></div>
+      <div class="ocard-h"><span class="oic">💡</span><div><h3>Rekomendasi Harga Jual</h3><p>Tiga pilihan harga berdasarkan penjualan nyata 3 jam terakhir.</p></div></div>
       <div class="ladder" role="img" aria-label="Ilustrasi sebaran harga laku: makin ke kanan makin mahal, makin sedikit volume">
         <div class="lad-h"><span>Volume laku per harga · 3 jam</span><span>ilustrasi</span></div>
         <svg viewBox="0 0 440 150" width="100%" aria-hidden="true">
@@ -571,19 +579,19 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div class="tier r"><span>Spread maksimal</span><b>Rp18.476</b><em>15% teratas · lebih lama laku · spread +176</em></div>
       </div>
       <ul class="oticks">
-        <li><b>Spread dari modal Anda sendiri:</b> ketik <code>/modal 18300</code>, atau bot memakai harga beli P2P teratas.</li>
-        <li><b>Antrian terlihat:</b> berapa iklan dan stok yang lebih murah dari harga pilihan Anda.</li>
-        <li><b>Bank yang laku lebih mahal</b> dan arah harga 1 jam terakhir: naik atau turun.</li>
+        <li><b>Spread dihitung dari modal Anda.</b> Cukup ketik <code>/modal 18300</code>. Kalau belum diisi, bot memakai harga beli P2P teratas.</li>
+        <li><b>Antrian terlihat jelas:</b> berapa iklan dan stok yang lebih murah dari harga pilihan Anda.</li>
+        <li><b>Bank yang laku lebih mahal</b> dari rata-rata, plus arah harga 1 jam terakhir.</li>
       </ul>
     </article>
   </div>
 
   <div class="why">
-    <div><b class="why-n">+Rp20</b><p><strong>Spread lebih lebar.</strong> Selisih Rp20 per USDT pada 10.000 USDT sehari sudah Rp200.000 per hari. Angka ini hanya ilustrasi; hasil Anda bergantung pada pasar.</p></div>
-    <div><b class="why-n">Tidak banting</b><p><strong>Tidak perlu banting harga.</strong> Anda tahu harga yang masih laku, jadi tidak asal memasang paling murah.</p></div>
-    <div><b class="why-n">Tepat waktu</b><p><strong>Tahu kapan naik dan turun.</strong> Naikkan harga saat momentum datang, turunkan lagi saat penjualan di harga itu berhenti.</p></div>
+    <div><b class="why-n">+Rp20/USDT</b><p><strong>Spread lebih lebar.</strong> Selisih Rp20 per USDT pada penjualan 10.000 USDT sehari berarti tambahan Rp200.000 per hari. Ini hitungan contoh; hasil nyata tergantung kondisi pasar.</p></div>
+    <div><b class="why-n">Tanpa banting harga</b><p><strong>Tidak perlu jadi yang termurah.</strong> Anda tahu harga yang masih dibeli orang, jadi tidak perlu memotong untung demi cepat laku.</p></div>
+    <div><b class="why-n">Tepat waktu</b><p><strong>Tahu kapan naik dan kapan turun.</strong> Naikkan harga saat pembeli ramai, turunkan lagi saat penjualan di harga itu berhenti.</p></div>
   </div>
-  <p class="opp-note">Rekomendasi dihitung dari penjualan yang tercatat dan terverifikasi. Ini bahan pertimbangan, bukan jaminan laku atau saran investasi. Harga P2P bisa berubah dalam hitungan menit.</p>
+  <p class="opp-note">Semua rekomendasi dihitung dari penjualan yang tercatat dan terverifikasi. Gunakan sebagai bahan pertimbangan, bukan jaminan laku atau saran investasi, karena harga P2P bisa berubah dalam hitungan menit.</p>
 </div>
 </section>
 
@@ -594,11 +602,11 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div>
       <p class="kicker k-red">Radar Bank · lindungi rekening Anda</p>
       <h2>Tahu lebih dulu saat suatu bank mulai bermasalah</h2>
-      <p class="lead">Ketakutan terbesar merchant P2P adalah rekening diblokir. Saat sebuah bank sedang bermasalah, misalnya banyak rekening dibekukan atau ada gangguan, merchant lain biasanya <b>diam-diam menghapus bank itu dari iklannya</b>. Sheanbot memantau perubahan ini di semua merchant, setiap 15 detik.</p>
+      <p class="lead">Ketakutan terbesar merchant P2P adalah rekening diblokir. Saat sebuah bank bermasalah, misalnya banyak rekening dibekukan atau ada gangguan, merchant yang tahu lebih dulu biasanya <b>diam-diam menghapus bank itu dari iklannya</b>. Sheanbot membaca perubahan ini di ratusan merchant sekaligus, jadi Anda ikut tahu tanpa harus punya orang dalam.</p>
       <ol class="rsteps">
         <li><span>1</span><div><b>Mengamati semua merchant</b><p>Setiap 5 menit bot mencatat bank apa saja yang diterima setiap merchant di Binance dan Bybit.</p></div></li>
         <li><span>2</span><div><b>Mendeteksi penghapusan serentak</b><p>Kalau banyak merchant yang <b>masih aktif</b> tiba-tiba menghapus bank yang sama, bot menandainya.</p></div></li>
-        <li><span>3</span><div><b>Mengirim peringatan</b><p>Anda langsung dapat pesan di Telegram, jadi bisa menonaktifkan bank itu di iklan sebelum ikut kena masalah.</p></div></li>
+        <li><span>3</span><div><b>Mengirim peringatan</b><p>Anda langsung dapat pesan di Telegram, jadi bisa menonaktifkan bank itu di iklan sebelum ikut terkena masalah.</p></div></li>
       </ol>
       <div class="rcrit">
         <b>Supaya tidak salah alarm, peringatan hanya dikirim bila:</b>
@@ -646,7 +654,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 <div class="wrap">
   <div class="head">
     <h2>Cara Sheanbot menemukan penjualan</h2>
-    <p class="lead">Empat tahap berjalan otomatis sepanjang hari. Anda hanya menerima hasil akhirnya di Telegram.</p>
+    <p class="lead">Empat tahap berjalan otomatis 24 jam. Anda cukup menerima hasilnya di Telegram.</p>
   </div>
   <ol class="flow">
     <li>
@@ -680,7 +688,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div>
       <p class="kicker">Alert penjualan</p>
       <h2>Setiap penjualan besar, lengkap dengan detailnya</h2>
-      <p class="lead">Pilih batas minimal 500, 1.000, 2.000, atau 5.000 USDT. Bot hanya mengirim yang benar-benar penting.</p>
+      <p class="lead">Pilih batas minimal 500, 1.000, 2.000, atau 5.000 USDT. Bot hanya mengirim penjualan yang penting bagi Anda.</p>
       <ul class="ticks">
         <li><span><b>Harga laku</b> ditandai pasti hanya bila bisa ditentukan dengan yakin.</span></li>
         <li><span><b>Bank pasti</b> untuk iklan yang menerima satu bank, daftar lengkap untuk iklan multi-bank.</span></li>
@@ -763,7 +771,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div>
       <p class="kicker">Aplikasi &amp; suara</p>
       <h2>Aplikasi di HP, bunyi saat laku jumbo</h2>
-      <p class="lead">Buka dari tombol di bot atau pasang ikon Sheanbot di layar HP. Data bergerak terus setiap beberapa detik selama aplikasi terbuka.</p>
+      <p class="lead">Buka dari tombol di bot atau pasang ikon Sheanbot di layar HP. Selama aplikasi terbuka, data diperbarui setiap beberapa detik.</p>
       <ul class="ticks">
         <li><span><b>Laku jumbo bersuara:</b> bunyi khusus dan banner merah saat ada penjualan di atas ambang pilihan Anda, misalnya 5.000 USDT.</span></li>
         <li><span><b>Live:</b> harga terbaik, teks berjalan penjualan terbaru, dan peluang harga tinggi.</span></li>
@@ -791,8 +799,8 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg></span><div><h3>Export CSV</h3><p>Unduh riwayat penjualan untuk diolah sendiri di Excel atau Google Sheets.</p></div></div>
     <div><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><div><h3>Ganti exchange kapan saja</h3><p>Binance dan Bybit dipantau bersamaan, jadi data langsung siap saat Anda pindah.</p></div></div>
     <div><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12l7-7"/></svg></span><div><h3>Radar Bank</h3><p>Tahu lebih awal saat banyak merchant meninggalkan satu bank, supaya Anda bisa menonaktifkannya sementara.</p></div></div>
-    <div><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 3"/></svg></span><div><h3>Riwayat 90 hari</h3><p>Laporan, grafik, dan tren bank sampai 30 dan 90 hari ke belakang.</p></div></div>
-    <div><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><h3>Rem otomatis</h3><p>Cek tiap 15 detik dan melambat sendiri bila exchange membatasi, jadi pemantauan tidak terputus.</p></div></div>
+    <div><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 3"/></svg></span><div><h3>Riwayat 90 hari</h3><p>Laporan, grafik, dan tren bank bisa dilihat sampai 90 hari ke belakang.</p></div></div>
+    <div><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><h3>Rem otomatis</h3><p>Bot memeriksa pasar tiap 15 detik dan otomatis melambat bila exchange membatasi, jadi pemantauan tidak terputus.</p></div></div>
   </div>
 </div>
 </section>
@@ -1111,7 +1119,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 <div class="wrap">
   <div class="head">
     <h2>Aktif dalam empat langkah</h2>
-    <p class="lead">Pembayaran diperiksa langsung oleh admin. Setelah aktif, semua fitur bisa dipakai dari Telegram Anda.</p>
+    <p class="lead">Pembayaran diperiksa langsung oleh admin. Setelah aktif, semua fitur langsung bisa dipakai dari Telegram dan aplikasi.</p>
   </div>
   <ol class="steps">
     <li><div class="num">1</div><h3>Hubungi admin</h3><p>Chat <a href="https://t.me/sheantu88">@sheantu88</a>. Admin mengirim link bot dan info pembayaran.</p></li>
@@ -1152,8 +1160,8 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 <section class="sec contact" id="kontak">
 <div class="wrap contact-grid">
   <div>
-    <h2>Siap memantau pasar P2P?</h2>
-    <p class="lead" style="margin-top:16px">Hubungi admin di Telegram untuk berlangganan, memperpanjang, atau bertanya tentang fitur.</p>
+    <h2>Siap jualan P2P lebih untung?</h2>
+    <p class="lead" style="margin-top:16px">Chat admin di Telegram untuk berlangganan, memperpanjang, atau bertanya dulu soal fitur. Admin membalas langsung, bukan bot.</p>
     <div class="cta-row">
       <a class="btn btn-w" href="https://t.me/sheantu88">
         <svg class="tg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.4 18.7 19.6c-.2 1-.9 1.3-1.7.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.3l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3.1c.9-.3 1.6.2 1.3 1.3z"/></svg>
