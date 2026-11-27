@@ -305,6 +305,14 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 .reqcard b{font-size:15px}
 .reqchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .reqchips span{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-2)}
+.popts{display:grid;gap:12px;margin:26px 0 4px;position:relative;z-index:1}
+.popt{position:relative;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;background:#15274A;border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:16px 18px}
+.popt b{display:block;font-size:17px}
+.popt span{display:block;font-size:13px;color:#A9B8D3}
+.popt strong{font-size:clamp(26px,3.4vw,32px);font-weight:800;letter-spacing:-.02em}
+.popt.best{background:#1B3266;border:2px solid #5C87FF;padding-top:22px}
+.pbadge{position:absolute;top:-11px;left:16px;background:#5EE0AE;color:#05331F;font-style:normal;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px}
+.psave{flex-basis:100%;margin-top:-4px;font-size:14px;font-weight:700;color:#5EE0AE}
 /* peluang & rekomendasi */
 .opp-sec{background:var(--navy);color:#fff}
 .opp-sec .lead{color:#C2CEE4}.opp-sec .lead b{color:#fff}
@@ -416,7 +424,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <div class="specs">
         <div>Pemindaian <b>tiap 15 detik</b></div>
         <div class="exs"><i style="background:var(--binance)"></i><i style="background:var(--bybit)"></i><b>Binance &amp; Bybit</b></div>
-        <div><b>Rp820.000</b> per 30 hari</div>
+        <div><b>Rp820.000</b>/bulan · <b>Rp2 jt</b>/3 bulan</div>
       </div>
       <ul class="trust">
         <li>Tanpa API key atau password exchange</li>
@@ -1117,15 +1125,25 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 <div class="wrap">
   <div class="head">
     <h2>Satu langganan, dua exchange</h2>
-    <p class="lead">Bayar sekali untuk 30 hari dan pantau Binance P2P serta Bybit P2P dalam satu bot. Tidak ada paket bertingkat atau biaya tambahan.</p>
+    <p class="lead">Semua fitur, Binance P2P dan Bybit P2P, dalam satu bot. Pilih bayar bulanan, atau ambil paket 3 bulan dan hemat Rp460.000. Tanpa biaya tambahan.</p>
   </div>
   <div class="price-wrap">
     <div class="plan">
       <svg class="pulse" viewBox="0 0 512 512" aria-hidden="true"><path d="M174 256H210L238 186L276 326L304 256H338" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><circle cx="138" cy="256" r="30" fill="#fff"/><circle cx="374" cy="256" r="30" fill="#fff"/></svg>
       <h3>Sheanbot</h3>
       <p class="sub">Semua fitur, Binance &amp; Bybit</p>
-      <div class="amount">Rp820.000 <small>/ 30 hari</small></div>
-      <p class="alt">atau $45 per 30 hari</p>
+      <div class="popts">
+        <div class="popt">
+          <div><b>1 bulan</b><span>30 hari · atau $45</span></div>
+          <strong>Rp820.000</strong>
+        </div>
+        <div class="popt best">
+          <em class="pbadge">Paling hemat</em>
+          <div><b>3 bulan</b><span>90 hari · atau $110 · ±Rp667 rb/bulan</span></div>
+          <strong>Rp2.000.000</strong>
+          <p class="psave">Hemat Rp460.000 dibanding bayar bulanan</p>
+        </div>
+      </div>
       <div class="plan-exs">
         <div class="plan-ex"><span class="exmark" style="background:var(--binance)">B</span><div><b>Binance P2P</b><span>USDT/IDR</span></div></div>
         <div class="plan-ex"><span class="exmark" style="background:var(--bybit)">B</span><div><b>Bybit P2P</b><span>USDT/IDR</span></div></div>
@@ -1142,7 +1160,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     </div>
     <div class="terms">
       <h3>Ketentuan langganan</h3>
-      <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div><b>Berlaku 30 hari</b><span>Dihitung sejak akses diaktifkan admin.</span></div></div>
+      <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div><b>Berlaku 30 atau 90 hari</b><span>Sesuai paket, dihitung sejak akses diaktifkan admin.</span></div></div>
       <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></span><div><b>Perpanjang kapan saja</b><span>Sisa masa aktif tetap terhitung saat Anda memperpanjang.</span></div></div>
       <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21h4"/></svg></span><div><b>Pengingat otomatis</b><span>Bot mengirim pengingat 3 hari sebelum masa aktif habis.</span></div></div>
       <div class="term"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><b>Satu akun Telegram</b><span>Akses berlaku untuk akun Telegram yang membayar.</span></div></div>
@@ -1161,7 +1179,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
   </div>
   <ol class="steps">
     <li><div class="num">1</div><h3>Hubungi admin</h3><p>Chat <a href="https://t.me/sheantu88">@sheantu88</a>. Admin mengirim link bot dan info pembayaran.</p></li>
-    <li><div class="num">2</div><h3>Lakukan pembayaran</h3><p>Transfer Rp820.000 (atau $45) sesuai info pembayaran di bot.</p></li>
+    <li><div class="num">2</div><h3>Lakukan pembayaran</h3><p>Transfer sesuai paket: Rp820.000 untuk 1 bulan atau Rp2.000.000 untuk 3 bulan, ke info pembayaran di bot.</p></li>
     <li><div class="num">3</div><h3>Kirim bukti</h3><p>Kirim foto atau screenshot bukti transfer langsung ke chat bot.</p></li>
     <li><div class="num">4</div><h3>Pilih exchange</h3><p>Setelah aktif, pilih Binance atau Bybit. Ganti kapan saja lewat menu.</p></li>
   </ol>
@@ -1187,6 +1205,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <details><summary>Apakah ada aplikasinya?</summary><p>Ada. Buka lewat tombol 📱 Buka Aplikasi Sheanbot di menu bot, atau pasang ikon di layar HP (iPhone: Safari → Bagikan → Tambah ke Layar Utama). Tidak perlu unduh dari App Store.</p></details>
     <details><summary>Bisakah bot menunjukkan bank yang dipakai pembeli?</summary><p>Tidak, karena exchange tidak membuka informasi itu. Bank dipastikan hanya bila iklan menerima satu bank saja. Untuk iklan multi-bank, semua metode ditampilkan sebagai kandidat.</p></details>
     <details><summary>Bisakah bot bertransaksi atau melepas USDT otomatis?</summary><p>Tidak. Sheanbot adalah alat pantau dan analisis. Semua transaksi tetap Anda lakukan sendiri di aplikasi exchange.</p></details>
+    <details><summary>Apa bedanya paket 1 bulan dan 3 bulan?</summary><p>Fiturnya sama persis. Paket 3 bulan Rp2.000.000 untuk 90 hari, sekitar Rp667 ribu per bulan, jadi Anda hemat Rp460.000 dibanding membayar Rp820.000 tiga kali. Kalau masih ada sisa masa aktif, 90 hari ditambahkan setelah tanggal berakhir.</p></details>
     <details><summary>Berapa lama aktivasi setelah membayar?</summary><p>Akses diaktifkan setelah admin memeriksa bukti pembayaran yang Anda kirim ke bot. Bila belum aktif, hubungi @sheantu88.</p></details>
     <details><summary>Apa yang terjadi bila masa aktif habis?</summary><p>Menu dan alert berhenti, dan bot menampilkan info perpanjangan. Pengaturan Anda seperti merchant favorit dan filter bank tetap tersimpan saat Anda memperpanjang.</p></details>
     <details><summary>Apakah ini produk resmi Binance atau Bybit?</summary><p>Bukan. Sheanbot adalah layanan independen dan tidak berafiliasi dengan Binance maupun Bybit.</p></details>
@@ -1211,8 +1230,8 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
   <div class="ccard">
     <h3>Informasi kontak</h3>
     <div class="crow"><span class="ico"><svg class="tg" viewBox="0 0 24 24" fill="#9DB8FF" aria-hidden="true"><path d="M21.9 4.4 18.7 19.6c-.2 1-.9 1.3-1.7.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.3l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3.1c.9-.3 1.6.2 1.3 1.3z"/></svg></span><div><b>Telegram admin</b><a href="https://t.me/sheantu88">@sheantu88</a></div></div>
-    <div class="crow"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9DB8FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/></svg></span><div><b>Harga</b><span>Rp820.000 atau $45 per 30 hari, termasuk Binance &amp; Bybit</span></div></div>
-    <div class="crow"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9DB8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><b>Siapkan saat menghubungi</b><ul class="prep"><li>Username Telegram yang akan memakai bot</li><li>Bukti pembayaran, bila sudah membayar</li></ul></div></div>
+    <div class="crow"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9DB8FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/></svg></span><div><b>Harga</b><span>Rp820.000 per bulan, atau Rp2.000.000 untuk 3 bulan (hemat Rp460.000). Termasuk Binance &amp; Bybit.</span></div></div>
+    <div class="crow"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9DB8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><b>Siapkan saat menghubungi</b><ul class="prep"><li>Username Telegram yang akan memakai bot</li><li>Paket yang dipilih: 1 bulan atau 3 bulan</li><li>Bukti pembayaran, bila sudah membayar</li></ul></div></div>
   </div>
 </div>
 </section>
