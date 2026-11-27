@@ -301,6 +301,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 .trust{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--ink-2);font-weight:600}
 .trust li{display:flex;align-items:center;gap:7px}
 .trust li::before{content:"";width:18px;height:18px;border-radius:50%;flex-shrink:0;background:var(--sold-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.4l3.2 3.2L17 8.8' fill='none' stroke='%230E7A55' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.reqcard{margin-top:18px;padding:14px 16px;border-radius:var(--r);background:var(--mist)}
+.reqcard b{font-size:15px}
+.reqchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.reqchips span{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-2)}
 /* peluang & rekomendasi */
 .opp-sec{background:var(--navy);color:#fff}
 .opp-sec .lead{color:#C2CEE4}.opp-sec .lead b{color:#fff}
@@ -506,6 +510,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Menebak bank mana yang paling banyak dipakai merchant.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Pasang harga dengan feeling: terlalu murah rugi spread, terlalu mahal tidak laku.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Baru tahu ada bank bermasalah setelah rekening sendiri ikut diblokir.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Tidak tahu syarat pembeli apa yang dipakai merchant yang laris.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Membuka Binance dan Bybit bergantian untuk membandingkan.</li>
       </ul>
     </div>
@@ -520,6 +525,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Ranking dan rekomendasi bank dari data iklan aktif.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Rekomendasi harga jual dan alert saat harga tinggi sedang laku.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Radar Bank: peringatan saat merchant serentak menghapus suatu bank.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Syarat pembeli tiap merchant terbaca: usia akun, KYC, minimal order.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Pindah Binance ↔ Bybit dengan satu tombol di menu bot.</li>
       </ul>
     </div>
@@ -788,6 +794,38 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div class="am-row"><span>VERIFIED-P2P · 14:25</span><em>+1.511 USDT</em></div>
       </div>
       <p class="illus" style="text-align:center;margin-top:12px;font-size:13px;color:var(--ink-3)">Ilustrasi. Angka bukan data asli.</p>
+    </div>
+  </div>
+
+  <div class="show">
+    <div>
+      <p class="kicker">Syarat merchant</p>
+      <h2>Lihat syarat pembeli yang dipasang merchant lain</h2>
+      <p class="lead">Merchant berpengalaman memasang syarat ketat untuk menyaring pembeli berisiko, misalnya akun baru atau yang belum KYC. Sheanbot membaca syarat itu di setiap iklan, jadi Anda bisa meniru pengaturan merchant yang laris sekaligus mengurangi risiko.</p>
+      <ul class="ticks">
+        <li><span><b>Usia akun pembeli</b> minimal berapa hari, dan apakah <b>KYC wajib</b>.</span></li>
+        <li><span><b>Minimal jumlah order</b> dan <b>tingkat penyelesaian</b> pembeli, bila dipasang merchant.</span></li>
+        <li><span><b>Batas waktu bayar</b> serta minimal dan maksimal nominal per order.</span></li>
+        <li><span><b>Ikut tampil di setiap alert laku,</b> jadi Anda tahu syarat apa yang dipakai merchant yang sedang laku.</span></li>
+        <li><span><b>Tidak menebak:</b> kalau exchange tidak mengirim datanya, bot menulis "Data tidak tersedia", bukan angka 0.</span></li>
+      </ul>
+    </div>
+    <div class="show-media">
+      <div class="panel">
+        <div class="panel-h"><b>📋 Syarat usia akun pembeli</b><span>ilustrasi · 349 iklan terbaca</span></div>
+        <div class="rank">
+          <div class="rank-row"><b>Tanpa syarat</b><div class="track"><i style="width:28%"></i></div><em>96</em></div>
+          <div class="rank-row"><b>1–7 hari</b><div class="track"><i style="width:17%"></i></div><em>58</em></div>
+          <div class="rank-row"><b>8–30 hari</b><div class="track"><i style="width:35%"></i></div><em>121</em></div>
+          <div class="rank-row"><b>&gt; 30 hari</b><div class="track"><i style="width:21%"></i></div><em>74</em></div>
+          <div class="rank-row"><b>KYC wajib</b><div class="track"><i style="width:87%"></i></div><em>302</em></div>
+        </div>
+        <div class="reqcard">
+          <b>👤 CONTOH_MERCHANT</b>
+          <div class="reqchips"><span>Usia akun ≥ 30 hari</span><span>KYC wajib</span><span>Min. 10 order</span><span>Selesai ≥ 90%</span><span>Bayar 15 menit</span><span>Rp500 rb – Rp50 jt</span></div>
+        </div>
+        <div class="legend"><span class="tag t-ok">🟢 Dibaca dari iklan</span><span class="tag t-na">⚪ Data tidak tersedia ditulis apa adanya</span></div>
+      </div>
     </div>
   </div>
 
@@ -1060,7 +1098,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
   <div class="honest">
     <div class="honest-row">
       <div><span class="tag t-ok">🟢 Aktual</span><h3>Dibaca langsung</h3></div>
-      <div><ul><li>Harga, stok, dan metode pembayaran setiap iklan</li><li>Jumlah iklan dan merchant per bank</li><li>Ranking, rekomendasi, dan tren bank</li></ul></div>
+      <div><ul><li>Harga, stok, dan metode pembayaran setiap iklan</li><li>Syarat pembeli yang dikirim exchange: usia akun, KYC, minimal order</li><li>Jumlah iklan dan merchant per bank</li><li>Ranking, rekomendasi, dan tren bank</li></ul></div>
     </div>
     <div class="honest-row">
       <div><span class="tag t-est">🟡 Estimasi</span><h3>Diturunkan dari data</h3></div>
@@ -1093,7 +1131,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div class="plan-ex"><span class="exmark" style="background:var(--bybit)">B</span><div><b>Bybit P2P</b><span>USDT/IDR</span></div></div>
       </div>
       <ul>
-        <li>Peluang harga tinggi</li><li>Rekomendasi harga jual</li><li>Alert laku jumbo bersuara</li><li>Aplikasi di HP</li><li>Radar Bank (deteksi bank bermasalah)</li><li>Alert penjualan besar</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence</li><li>Ranking &amp; tren bank</li>
+        <li>Peluang harga tinggi</li><li>Rekomendasi harga jual</li><li>Alert laku jumbo bersuara</li><li>Aplikasi di HP</li><li>Radar Bank (deteksi bank bermasalah)</li><li>Syarat merchant (usia akun, KYC, dll.)</li><li>Alert penjualan besar</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence</li><li>Ranking &amp; tren bank</li>
         <li>Merchant favorit</li><li>Alert harga</li><li>Filter bank</li><li>Grafik harga &amp; volume</li>
         <li>Pola pasar</li><li>Riwayat 90 hari</li><li>Laporan harian &amp; mingguan</li><li>Export CSV</li><li>Dukungan admin</li>
       </ul>
@@ -1145,6 +1183,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <details><summary>Bagaimana bot tahu harga mana yang laku?</summary><p>Setiap penjualan yang terdeteksi dicatat beserta harganya. Rekomendasi harga hanya memakai penjualan yang harganya pasti dan sudah terverifikasi, lalu dihitung dari volume yang laku di tiap harga dalam 3 jam terakhir (diperluas ke 6 atau 24 jam bila pasar sepi).</p></details>
     <details><summary>Apakah rekomendasi harga menjamin iklan saya laku?</summary><p>Tidak. Rekomendasi dan alert peluang dihitung dari penjualan yang sudah terjadi, sebagai bahan pertimbangan. Harga P2P bisa berubah dalam hitungan menit, jadi tetap cek kondisi pasar sebelum memasang harga.</p></details>
     <details><summary>Apakah Radar Bank bisa memastikan suatu bank sedang memblokir rekening?</summary><p>Tidak bisa memastikan, karena bot tidak punya akses ke data bank. Radar Bank membaca perilaku merchant: kalau banyak merchant aktif serentak menghapus bank yang sama, itu sinyal kuat ada masalah. Gunakan sebagai peringatan dini, lalu cek info resmi bank. Bank yang tidak ditandai juga belum tentu aman.</p></details>
+    <details><summary>Syarat merchant apa saja yang bisa dibaca?</summary><p>Usia akun pembeli minimal, KYC wajib, minimal jumlah order dan tingkat penyelesaian pembeli, batas waktu bayar, serta minimal dan maksimal nominal per order, sejauh data itu dikirim exchange. Ringkasannya ada di menu 📋 Syarat Merchant, dan detail per merchant bisa dicari dengan /merchant NAMA. Kalau suatu syarat tidak dikirim exchange, bot menulis "Data tidak tersedia", bukan menebak.</p></details>
     <details><summary>Apakah ada aplikasinya?</summary><p>Ada. Buka lewat tombol 📱 Buka Aplikasi Sheanbot di menu bot, atau pasang ikon di layar HP (iPhone: Safari → Bagikan → Tambah ke Layar Utama). Tidak perlu unduh dari App Store.</p></details>
     <details><summary>Bisakah bot menunjukkan bank yang dipakai pembeli?</summary><p>Tidak, karena exchange tidak membuka informasi itu. Bank dipastikan hanya bila iklan menerima satu bank saja. Untuk iklan multi-bank, semua metode ditampilkan sebagai kandidat.</p></details>
     <details><summary>Bisakah bot bertransaksi atau melepas USDT otomatis?</summary><p>Tidak. Sheanbot adalah alat pantau dan analisis. Semua transaksi tetap Anda lakukan sendiri di aplikasi exchange.</p></details>
