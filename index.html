@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
 <title>Sheanbot — Bot Telegram Pemantau P2P Binance & Bybit</title>
-<meta name="description" content="Sheanbot memantau pasar P2P USDT/IDR di Binance dan Bybit setiap 15 detik: alert penjualan besar, peluang harga tinggi, rekomendasi harga jual, analisis bank merchant, dan aplikasi di HP.">
+<meta name="description" content="Sheanbot memantau pasar P2P USDT/IDR di Binance dan Bybit setiap 15 detik: alert penjualan besar, peluang harga tinggi, rekomendasi harga jual, Radar Bank untuk deteksi dini bank bermasalah, dan aplikasi di HP.">
 <meta property="og:title" content="Sheanbot — Bot Telegram Pemantau P2P Binance & Bybit">
 <meta property="og:description" content="Alert penjualan besar, peluang harga tinggi, rekomendasi harga jual, radar bank, dan aplikasi di HP untuk P2P USDT/IDR.">
 <meta property="og:type" content="website">
@@ -346,6 +346,33 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
 .am-row em{font-style:normal;color:#0B8A5F;font-weight:800}
 @media (max-width:960px){.opp-grid,.why{grid-template-columns:minmax(0,1fr)}.why{gap:24px}}
 @media (max-width:560px){.ocard{padding:20px}.tier b{font-size:19px}}
+/* radar bank */
+.radar-sec{background:linear-gradient(180deg,#FFF6F5 0%,#FFFFFF 70%)}
+.k-red{color:#C62828}
+.rgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:64px;align-items:start}
+.radar-sec .lead{margin-top:16px}.radar-sec .lead b{color:var(--ink)}
+.rsteps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:18px}
+.rsteps li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px}
+.rsteps li>span{width:38px;height:38px;border-radius:50%;background:#FDE3E1;color:#C62828;font-weight:800;display:grid;place-items:center}
+.rsteps b{font-size:17px}
+.rsteps p{color:var(--ink-2);font-size:15.5px;margin-top:2px}.rsteps p b{font-size:inherit;color:var(--ink)}
+.rcrit{margin-top:30px;border:1px solid #F5C9C5;background:#fff;border-radius:var(--r);padding:20px 22px}
+.rcrit>b{font-size:15.5px}
+.rcrit ul{margin:10px 0 0;padding-left:20px;color:var(--ink-2);font-size:15px;display:grid;gap:6px}
+.rcrit p{margin-top:12px;font-size:15px;color:var(--ink-2)}
+.rmedia{display:grid;gap:22px}
+.rpanel{padding:22px}
+.rrow{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:6px;padding:12px 0;border-top:1px solid var(--line-2)}
+.rrow:first-of-type{border-top:0}
+.rrow b{display:block;font-size:15px}
+.rrow em{font-style:normal;font-size:13px;color:var(--ink-3)}
+.rrow strong{font-size:16px;color:var(--ink-3)}
+.rbar{grid-column:1/-1;height:6px;border-radius:3px;background:var(--line-2);overflow:hidden}
+.rbar i{display:block;height:100%;background:var(--blue);border-radius:3px}
+.rrow.bad strong{color:#C62828}.rrow.bad .rbar i{background:#E04B43}
+.rrow.up strong{color:var(--sold)}
+.rnote{margin-top:44px;font-size:14px;color:var(--ink-3);max-width:90ch}
+@media (max-width:960px){.rgrid{grid-template-columns:minmax(0,1fr);gap:40px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -358,7 +385,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div>Shean<span>bot</span></div>
   </a>
   <nav class="links" aria-label="Navigasi utama">
-    <a href="#peluang">Peluang harga</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a>
+    <a href="#peluang">Peluang harga</a><a href="#radar">Radar Bank</a><a href="#fitur">Fitur</a><a href="#harga">Harga</a><a href="#faq">FAQ</a>
     <a class="btn" href="#harga">Berlangganan</a>
   </nav>
 </div>
@@ -374,7 +401,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div>
       <span class="chip"><span class="dot"><i></i></span>Bot Telegram untuk P2P USDT/IDR</span>
       <h1>Tahu merchant mana yang laku, saat itu juga.</h1>
-      <p class="lead">Sheanbot membaca seluruh iklan P2P di Binance dan Bybit setiap 15 detik. Anda langsung tahu siapa yang laku, di harga berapa, lewat bank apa, dan kapan harga tinggi sedang laku supaya Anda bisa ikut pasang.</p>
+      <p class="lead">Sheanbot membaca seluruh iklan P2P di Binance dan Bybit setiap 15 detik. Anda langsung tahu siapa yang laku, di harga berapa, lewat bank apa, kapan harga tinggi sedang laku, dan bank mana yang mulai ditinggalkan merchant sebelum Anda ikut kena masalah.</p>
       <div class="cta-row">
         <a class="btn" href="#harga">Mulai berlangganan</a>
         <a class="btn-ghost" href="#peluang">Lihat fitur harga</a>
@@ -442,10 +469,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
               <div class="tm">14:12</div>
             </div>
             <div class="bub">
-              <div class="t">🔥 LAKU BESAR</div>
-              <div>👤 Merchant: USDT_CEPAT</div>
-              <div>💰 Terjual: 1,850 USDT</div>
-              <div>🏦 Bank: BCA ✅ pasti</div>
+              <div class="t">🚨 POTENSI MASALAH BANK: SeaBank</div>
+              <div>👥 Merchant menerima SeaBank: 26 → 14 (▼ 46%)</div>
+              <div>🔻 9 merchant aktif MENGHAPUS SeaBank</div>
+              <div>💡 Pertimbangkan nonaktifkan SeaBank sementara</div>
               <div class="tm">14:16</div>
             </div>
           </div>
@@ -470,6 +497,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Tidak tahu harga berapa yang benar-benar laku, hanya harga yang dipasang.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Menebak bank mana yang paling banyak dipakai merchant.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Pasang harga dengan feeling: terlalu murah rugi spread, terlalu mahal tidak laku.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Baru tahu ada bank bermasalah setelah rekening sendiri ikut diblokir.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA5B4" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>Membuka Binance dan Bybit bergantian untuk membandingkan.</li>
       </ul>
     </div>
@@ -483,6 +511,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Harga laku per bank, ditampilkan apa adanya tanpa dirata-rata.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Ranking dan rekomendasi bank dari data iklan aktif.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Rekomendasi harga jual dan alert saat harga tinggi sedang laku.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Radar Bank: peringatan saat merchant serentak menghapus suatu bank.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Pindah Binance ↔ Bybit dengan satu tombol di menu bot.</li>
       </ul>
     </div>
@@ -555,6 +584,60 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <div><b class="why-n">Tepat waktu</b><p><strong>Tahu kapan naik dan turun.</strong> Naikkan harga saat momentum datang, turunkan lagi saat penjualan di harga itu berhenti.</p></div>
   </div>
   <p class="opp-note">Rekomendasi dihitung dari penjualan yang tercatat dan terverifikasi. Ini bahan pertimbangan, bukan jaminan laku atau saran investasi. Harga P2P bisa berubah dalam hitungan menit.</p>
+</div>
+</section>
+
+<!-- RADAR BANK -->
+<section class="sec radar-sec" id="radar">
+<div class="wrap">
+  <div class="rgrid">
+    <div>
+      <p class="kicker k-red">Radar Bank · lindungi rekening Anda</p>
+      <h2>Tahu lebih dulu saat suatu bank mulai bermasalah</h2>
+      <p class="lead">Ketakutan terbesar merchant P2P adalah rekening diblokir. Saat sebuah bank sedang bermasalah, misalnya banyak rekening dibekukan atau ada gangguan, merchant lain biasanya <b>diam-diam menghapus bank itu dari iklannya</b>. Sheanbot memantau perubahan ini di semua merchant, setiap 15 detik.</p>
+      <ol class="rsteps">
+        <li><span>1</span><div><b>Mengamati semua merchant</b><p>Setiap 5 menit bot mencatat bank apa saja yang diterima setiap merchant di Binance dan Bybit.</p></div></li>
+        <li><span>2</span><div><b>Mendeteksi penghapusan serentak</b><p>Kalau banyak merchant yang <b>masih aktif</b> tiba-tiba menghapus bank yang sama, bot menandainya.</p></div></li>
+        <li><span>3</span><div><b>Mengirim peringatan</b><p>Anda langsung dapat pesan di Telegram, jadi bisa menonaktifkan bank itu di iklan sebelum ikut kena masalah.</p></div></li>
+      </ol>
+      <div class="rcrit">
+        <b>Supaya tidak salah alarm, peringatan hanya dikirim bila:</b>
+        <ul>
+          <li>merchant yang menerima bank itu turun minimal <b>30%</b> dalam ±30 menit,</li>
+          <li>penurunannya <b>jauh lebih parah</b> dibanding pasar keseluruhan, jadi bukan karena pasar sedang sepi,</li>
+          <li>minimal <b>3 merchant yang masih aktif</b> benar-benar menghapus bank itu, bukan sekadar iklannya mati.</li>
+        </ul>
+        <p>Saat bank kembali normal, Anda juga dapat pesan <b>✅ Bank pulih</b>.</p>
+      </div>
+    </div>
+
+    <div class="rmedia">
+      <div class="chatbox"><div class="bub">
+        <div class="t">🚨 POTENSI MASALAH BANK: SeaBank</div>
+        <div>🟡 Binance P2P • 28 menit terakhir</div>
+        <div class="sp"></div>
+        <div>👥 Merchant menerima SeaBank: 26 → 14 (▼ 46%)</div>
+        <div>📊 Pasar keseluruhan: 214 → 206 merchant (▼ 4%)</div>
+        <div>🔻 12 merchant berhenti menerima SeaBank:</div>
+        <div class="ind">• 9 masih aktif tapi MENGHAPUS SeaBank dari iklannya</div>
+        <div class="ind">• 3 tidak terlihat lagi (iklan mati)</div>
+        <div class="sp"></div>
+        <div>💡 Bisa jadi gangguan atau pemblokiran rekening SeaBank. Pertimbangkan menonaktifkan SeaBank di iklan Anda sementara, dan cek info resmi bank.</div>
+        <div>ℹ️ Sinyal dari perubahan iklan merchant, bukan konfirmasi resmi bank.</div>
+        <div class="tm">15:42</div>
+      </div></div>
+
+      <div class="panel rpanel">
+        <div class="panel-h"><b>📡 Radar Bank</b><span>ilustrasi · 30 menit lalu → sekarang</span></div>
+        <div class="rrow bad"><div><b>⚠️ SeaBank</b><em>26 → 14 merchant · 9 hapus bank ini</em></div><strong>−46%</strong><div class="rbar"><i style="width:54%"></i></div></div>
+        <div class="rrow"><div><b>BCA</b><em>120 → 116 merchant</em></div><strong>−3%</strong><div class="rbar"><i style="width:97%"></i></div></div>
+        <div class="rrow"><div><b>Bank Mandiri</b><em>98 → 95 merchant</em></div><strong>−3%</strong><div class="rbar"><i style="width:97%"></i></div></div>
+        <div class="rrow"><div><b>BRI</b><em>71 → 70 merchant</em></div><strong>−1%</strong><div class="rbar"><i style="width:99%"></i></div></div>
+        <div class="rrow up"><div><b>DANA</b><em>40 → 43 merchant</em></div><strong>+8%</strong><div class="rbar"><i style="width:100%"></i></div></div>
+      </div>
+    </div>
+  </div>
+  <p class="rnote">Radar Bank adalah sinyal dini dari perubahan iklan merchant, bukan informasi resmi dari bank atau exchange. Bank yang tidak ditandai belum tentu aman. Tetap terapkan kebiasaan aman: terima transfer hanya dari rekening atas nama pembeli yang sama dengan nama KYC-nya, dan cek mutasi di aplikasi bank, bukan dari screenshot.</p>
 </div>
 </section>
 
@@ -724,6 +807,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
   <div class="tabs" role="tablist" aria-label="Contoh pesan Sheanbot">
     <button class="tab" role="tab" id="t6" aria-controls="p6" aria-selected="true">Peluang harga tinggi</button>
     <button class="tab" role="tab" id="t7" aria-controls="p7" aria-selected="false">Rekomendasi harga</button>
+    <button class="tab" role="tab" id="t8" aria-controls="p8" aria-selected="false">Radar bank</button>
     <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="false">Alert laku besar</button>
     <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false">Iklan multi-bank</button>
     <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false">Rekomendasi bank</button>
@@ -789,6 +873,33 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <div class="sp"></div>
       <div>🏦 Laku lebih mahal: DANA (+12), SeaBank (+8)</div>
       <div class="tm">17:20</div>
+    </div></div>
+  </div>
+
+  <div class="tp" role="tabpanel" id="p8" aria-labelledby="t8" hidden>
+    <div>
+      <h3>Radar bank</h3>
+      <p>Dikirim otomatis saat banyak merchant yang masih aktif tiba-tiba menghapus bank yang sama dari iklannya. Buka laporannya kapan saja dengan /radarbank.</p>
+      <ol class="anno">
+        <li><div><b>Sebelum → sesudah</b>: jumlah merchant yang menerima bank itu, dibanding ±30 menit lalu.</div></li>
+        <li><div><b>Dibanding pasar</b>: kalau semua bank turun bersamaan, itu pasar sepi, bukan masalah bank.</div></li>
+        <li><div><b>Menghapus vs iklan mati</b>: yang penting adalah merchant yang masih berjualan tapi membuang bank itu.</div></li>
+        <li><div><b>Saran tindakan</b>: nonaktifkan bank sementara dan cek info resmi. Pesan ✅ Bank pulih menyusul saat normal.</div></li>
+      </ol>
+    </div>
+    <div class="chatbox"><div class="bub">
+      <div class="t">🚨 POTENSI MASALAH BANK: SeaBank</div>
+      <div>🟡 Binance P2P • 28 menit terakhir</div>
+      <div class="sp"></div>
+      <div>👥 Merchant menerima SeaBank: 26 → 14 (▼ 46%)</div>
+      <div>📊 Pasar keseluruhan: 214 → 206 merchant (▼ 4%)</div>
+      <div>🔻 12 merchant berhenti menerima SeaBank:</div>
+      <div class="ind">• 9 masih aktif tapi MENGHAPUS SeaBank dari iklannya</div>
+      <div class="ind">• 3 tidak terlihat lagi (iklan mati)</div>
+      <div class="sp"></div>
+      <div>💡 Bisa jadi gangguan atau pemblokiran rekening SeaBank. Pertimbangkan menonaktifkan SeaBank di iklan Anda sementara, dan cek info resmi bank.</div>
+      <div>ℹ️ Sinyal dari perubahan iklan merchant, bukan konfirmasi resmi bank.</div>
+      <div class="tm">15:42</div>
     </div></div>
   </div>
 
@@ -974,7 +1085,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
         <div class="plan-ex"><span class="exmark" style="background:var(--bybit)">B</span><div><b>Bybit P2P</b><span>USDT/IDR</span></div></div>
       </div>
       <ul>
-        <li>Peluang harga tinggi</li><li>Rekomendasi harga jual</li><li>Alert laku jumbo bersuara</li><li>Aplikasi di HP</li><li>Radar Bank</li><li>Alert penjualan besar</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence</li><li>Ranking &amp; tren bank</li>
+        <li>Peluang harga tinggi</li><li>Rekomendasi harga jual</li><li>Alert laku jumbo bersuara</li><li>Aplikasi di HP</li><li>Radar Bank (deteksi bank bermasalah)</li><li>Alert penjualan besar</li><li>Verifikasi penjualan</li><li>Merchant Bank Intelligence</li><li>Ranking &amp; tren bank</li>
         <li>Merchant favorit</li><li>Alert harga</li><li>Filter bank</li><li>Grafik harga &amp; volume</li>
         <li>Pola pasar</li><li>Riwayat 90 hari</li><li>Laporan harian &amp; mingguan</li><li>Export CSV</li><li>Dukungan admin</li>
       </ul>
@@ -1025,6 +1136,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
     <details><summary>Seberapa akurat datanya?</summary><p>Harga, stok, dan metode pembayaran dibaca langsung. Penjualan dihitung dari penurunan stok lalu dikonfirmasi lewat kenaikan jumlah order merchant. Data yang tidak dibuka exchange ditulis "tidak tersedia".</p></details>
     <details><summary>Bagaimana bot tahu harga mana yang laku?</summary><p>Setiap penjualan yang terdeteksi dicatat beserta harganya. Rekomendasi harga hanya memakai penjualan yang harganya pasti dan sudah terverifikasi, lalu dihitung dari volume yang laku di tiap harga dalam 3 jam terakhir (diperluas ke 6 atau 24 jam bila pasar sepi).</p></details>
     <details><summary>Apakah rekomendasi harga menjamin iklan saya laku?</summary><p>Tidak. Rekomendasi dan alert peluang dihitung dari penjualan yang sudah terjadi, sebagai bahan pertimbangan. Harga P2P bisa berubah dalam hitungan menit, jadi tetap cek kondisi pasar sebelum memasang harga.</p></details>
+    <details><summary>Apakah Radar Bank bisa memastikan suatu bank sedang memblokir rekening?</summary><p>Tidak bisa memastikan, karena bot tidak punya akses ke data bank. Radar Bank membaca perilaku merchant: kalau banyak merchant aktif serentak menghapus bank yang sama, itu sinyal kuat ada masalah. Gunakan sebagai peringatan dini, lalu cek info resmi bank. Bank yang tidak ditandai juga belum tentu aman.</p></details>
     <details><summary>Apakah ada aplikasinya?</summary><p>Ada. Buka lewat tombol 📱 Buka Aplikasi Sheanbot di menu bot, atau pasang ikon di layar HP (iPhone: Safari → Bagikan → Tambah ke Layar Utama). Tidak perlu unduh dari App Store.</p></details>
     <details><summary>Bisakah bot menunjukkan bank yang dipakai pembeli?</summary><p>Tidak, karena exchange tidak membuka informasi itu. Bank dipastikan hanya bila iklan menerima satu bank saja. Untuk iklan multi-bank, semua metode ditampilkan sebagai kandidat.</p></details>
     <details><summary>Bisakah bot bertransaksi atau melepas USDT otomatis?</summary><p>Tidak. Sheanbot adalah alat pantau dan analisis. Semua transaksi tetap Anda lakukan sendiri di aplikasi exchange.</p></details>
@@ -1072,7 +1184,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);color:#9
       <p style="max-width:48ch">Sheanbot tidak berafiliasi dengan Binance atau Bybit. Bukan saran keuangan atau investasi. Data berasal dari sumber publik dan dapat berubah, tertunda, atau tidak lengkap.</p>
     </div>
     <nav aria-label="Tautan footer">
-      <a href="#peluang">Peluang harga</a><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+      <a href="#peluang">Peluang harga</a><a href="#radar">Radar Bank</a><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#contoh">Contoh pesan</a><a href="#harga">Harga</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
     </nav>
   </div>
   <div class="copy"><span>© <span id="yr">2026</span> Sheanbot</span><span>sheanbot.com</span></div>
